@@ -277,6 +277,29 @@ h2 {
   transform: rotate(15deg);
 }
 
+.floating-icon {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 22px rgba(9, 9, 9, 0.12));
+}
+
+.floating-leaf {
+  left: clamp(1rem, 7vw, 7rem);
+  bottom: clamp(1.5rem, 5vw, 4.5rem);
+  width: clamp(8rem, 15vw, 15rem);
+  transform: rotate(-14deg);
+}
+
+.floating-crown {
+  right: clamp(1rem, 4vw, 4rem);
+  bottom: clamp(1rem, 4vw, 3rem);
+  width: clamp(6rem, 11vw, 11rem);
+  opacity: 0.9;
+  transform: rotate(-10deg);
+}
+
 .services {
   display: grid;
   grid-template-columns: minmax(17rem, 0.72fr) 1fr;
@@ -319,6 +342,8 @@ h2 {
 }
 
 .service-card span:last-of-type {
+  display: block;
+  padding-right: 2rem;
   font-size: 1.28rem;
   font-weight: 900;
 }
@@ -331,61 +356,18 @@ h2 {
 }
 
 .card-art {
-  position: relative;
+  display: block;
   align-self: center;
   justify-self: center;
-  width: 8rem;
-  height: 8rem;
+  width: min(11.75rem, 88%);
+  height: 10.4rem;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 12px rgba(9, 9, 9, 0.12));
+  transition: transform 180ms ease;
 }
 
-.leaf-art {
-  background: linear-gradient(135deg, #ff9f1c 0 20%, #ef5da8 20% 42%, #29c39b 42% 100%);
-  border-radius: 76% 24% 74% 26%;
-  transform: rotate(-18deg);
-}
-
-.leaf-art::after,
-.bubble-art::after,
-.crown-art::after {
-  content: "";
-  position: absolute;
-  inset: 21%;
-  border: 0.18rem solid rgba(255, 255, 255, 0.54);
-  border-radius: inherit;
-}
-
-.bubble-art {
-  width: 8.5rem;
-  height: 5.6rem;
-  margin-top: 1rem;
-  background: radial-gradient(circle at 28% 36%, #efcbff, #a95ed5 62%, #7830aa);
-  border-radius: 58% 42% 62% 38%;
-  transform: rotate(-8deg);
-}
-
-.bubble-art::before {
-  content: "";
-  position: absolute;
-  right: -1.5rem;
-  bottom: -1.25rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  background: #c681e7;
-  border-radius: 50%;
-}
-
-.crown-art {
-  width: 7.8rem;
-  height: 7.8rem;
-}
-
-.crown-art::before {
-  content: "";
-  position: absolute;
-  inset: 19% 15% 23%;
-  border: 0.44rem solid var(--yellow);
-  border-top: 0;
-  clip-path: polygon(0 100%, 0 42%, 26% 64%, 48% 0, 70% 64%, 100% 42%, 100% 100%);
+.service-card:hover .card-art {
+  transform: rotate(-4deg) scale(1.05);
 }
 
 .portfolio-strip {
@@ -404,6 +386,7 @@ h2 {
 }
 
 .newsletter {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -418,6 +401,21 @@ h2 {
 
 .newsletter img {
   width: clamp(6.5rem, 12vw, 11rem);
+}
+
+.newsletter > img:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-bubble {
+  position: absolute;
+  right: clamp(1rem, 5vw, 4rem);
+  top: -4.5rem;
+  width: clamp(7rem, 15vw, 15rem) !important;
+  opacity: 0.18;
+  transform: rotate(-12deg);
+  pointer-events: none;
 }
 
 .newsletter .eyebrow {
