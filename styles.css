@@ -277,29 +277,6 @@ h2 {
   transform: rotate(15deg);
 }
 
-.floating-icon {
-  position: absolute;
-  z-index: 1;
-  pointer-events: none;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 22px rgba(9, 9, 9, 0.12));
-}
-
-.floating-leaf {
-  left: clamp(1rem, 7vw, 7rem);
-  bottom: clamp(1.5rem, 5vw, 4.5rem);
-  width: clamp(8rem, 15vw, 15rem);
-  transform: rotate(-14deg);
-}
-
-.floating-crown {
-  right: clamp(1rem, 4vw, 4rem);
-  bottom: clamp(1rem, 4vw, 3rem);
-  width: clamp(6rem, 11vw, 11rem);
-  opacity: 0.9;
-  transform: rotate(-10deg);
-}
-
 .services {
   display: grid;
   grid-template-columns: minmax(17rem, 0.72fr) 1fr;
@@ -401,21 +378,6 @@ h2 {
 
 .newsletter img {
   width: clamp(6.5rem, 12vw, 11rem);
-}
-
-.newsletter > img:first-child {
-  position: relative;
-  z-index: 1;
-}
-
-.newsletter-bubble {
-  position: absolute;
-  right: clamp(1rem, 5vw, 4rem);
-  top: -4.5rem;
-  width: clamp(7rem, 15vw, 15rem) !important;
-  opacity: 0.18;
-  transform: rotate(-12deg);
-  pointer-events: none;
 }
 
 .newsletter .eyebrow {
