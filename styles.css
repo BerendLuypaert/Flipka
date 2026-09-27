@@ -326,7 +326,7 @@ h2 {
   position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
-  min-height: 15rem;
+  min-height: 17.5rem;
   padding: 1.6rem;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.46);
@@ -359,8 +359,8 @@ h2 {
   display: block;
   align-self: center;
   justify-self: center;
-  width: min(11.75rem, 88%);
-  height: 10.4rem;
+  width: min(10rem, 82%);
+  height: 8.6rem;
   object-fit: contain;
   filter: drop-shadow(0 16px 12px rgba(9, 9, 9, 0.12));
   transition: transform 180ms ease;
