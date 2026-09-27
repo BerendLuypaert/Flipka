@@ -336,8 +336,8 @@ h2 {
   display: block;
   align-self: center;
   justify-self: center;
-  width: min(10rem, 82%);
-  height: 8.6rem;
+  width: min(11rem, 88%);
+  height: 9.4rem;
   object-fit: contain;
   filter: drop-shadow(0 16px 12px rgba(9, 9, 9, 0.12));
   transition: transform 180ms ease;
