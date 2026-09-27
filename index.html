@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flipka | Colorful castle builder</title>
+    <meta name="description" content="Flipka redesign prototype for murals, workshops, artwork and playful custom creations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Flipka home">
+        <img src="assets/flipka-logo-color.png" alt="Flipka">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="what-i-do.html">What I do</a>
+        <a href="about-me.html">About me</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="paint paint-orange"></div>
+        <div class="paint paint-purple"></div>
+        <div class="paint paint-green"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Murals, workshops, artwork and more</p>
+          <h1 id="hero-title">Colorful castle builder.</h1>
+          <p class="hero-text">Bringing colour to walls, spaces and people with bold characters, custom creations and a playful twist.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#services">Discover more <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="contact.html">Start a project</a>
+          </div>
+        </div>
+        <div class="hero-stage" aria-label="Flipka mural preview">
+          <img class="hero-photo" src="assets/hero-mural.jpeg" alt="Colorful Flipka mural">
+          <img class="hero-art" src="assets/flipka-artwork.png" alt="">
+          <div class="hero-badge">Good walls<br>good people</div>
+        </div>
+      </section>
+
+      <section id="services" class="services" aria-labelledby="services-title">
+        <div class="section-intro">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">A look inside Flipka's world.</h2>
+          <p>From large scale murals to custom creations and workshops. Always with colour, character and a wink.</p>
+        </div>
+        <div class="service-grid">
+          <a class="service-card" href="what-i-do.html">
+            <span class="card-art leaf-art" aria-hidden="true"></span>
+            <span>Murals</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a class="service-card" href="what-i-do.html">
+            <span class="card-art bubble-art" aria-hidden="true"></span>
+            <span>Workshops</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a class="service-card" href="what-i-do.html">
+            <span class="card-art crown-art" aria-hidden="true"></span>
+            <span>Artwork</span>
+            <b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="portfolio-strip" aria-label="Flipka work samples">
+        <img src="assets/portfolio-1.png" alt="Flipka colorful artwork sample">
+        <img src="assets/portfolio-2.png" alt="Flipka colorful artwork sample">
+        <img src="assets/portfolio-3.png" alt="Flipka colorful artwork sample">
+      </section>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <img src="assets/flipka-character.png" alt="">
+        <div>
+          <p class="eyebrow">Stay posted</p>
+          <h2 id="newsletter-title">Want a look behind the scenes?</h2>
+          <p>Subscribe for unique promotions, fresh work and colourful project updates.</p>
+        </div>
+        <a class="button button-dark" href="contact.html">Contact me <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Let's work together</strong>
+        <p>Walls, shoes, products, workshops or crazy creative stuff.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href="mailto:flip@flipka.be">flip@flipka.be</a> · +32 476 740 944</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
