@@ -1,9 +1,26 @@
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".menu-toggle");
 
+let isCompact = false;
+let ticking = false;
+
 const updateHeaderState = () => {
   if (!header) return;
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+
+  const shouldCompact = isCompact ? window.scrollY > 10 : window.scrollY > 42;
+  if (shouldCompact !== isCompact) {
+    isCompact = shouldCompact;
+    header.classList.toggle("is-scrolled", isCompact);
+  }
+};
+
+const requestHeaderUpdate = () => {
+  if (ticking) return;
+  ticking = true;
+  window.requestAnimationFrame(() => {
+    updateHeaderState();
+    ticking = false;
+  });
 };
 
 if (toggle && header) {
@@ -14,4 +31,4 @@ if (toggle && header) {
 }
 
 updateHeaderState();
-window.addEventListener("scroll", updateHeaderState, { passive: true });
+window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
