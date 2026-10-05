@@ -570,11 +570,11 @@ h2 {
 
 .mural-corner-blob {
   position: absolute;
-  top: -1.4rem;
-  right: -1.65rem;
+  top: -1.35rem;
+  left: 41%;
   z-index: 4;
-  width: clamp(8.4rem, 11vw, 10.8rem);
-  height: clamp(5.6rem, 7vw, 7.2rem);
+  width: 9rem;
+  height: 6rem;
   background: radial-gradient(circle at 30% 30%, #baffef, #13b792 64%);
   border-radius: 59% 41% 65% 35%;
   box-shadow: 1.2rem 4rem 0 -3rem #13b792;
@@ -1013,7 +1013,7 @@ h2 {
 
   .mural-corner-blob {
     top: -1rem;
-    right: -1.2rem;
+    left: 39%;
     width: 6.4rem;
     height: 4.25rem;
   }
