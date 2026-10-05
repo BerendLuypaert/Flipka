@@ -622,7 +622,7 @@ h2 {
 .spray-stripe {
   z-index: 3;
   opacity: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   animation: stripeReveal 2800ms var(--delay) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   clip-path: inset(var(--top) 100% var(--bottom) 0);
 }
@@ -630,7 +630,7 @@ h2 {
 .spray-art-finish {
   z-index: 4;
   opacity: 0;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
   animation: finishCoat 900ms 2550ms ease-out forwards;
 }
 
@@ -757,9 +757,9 @@ h2 {
     clip-path: inset(var(--top) 18% var(--bottom) 0);
   }
   100% {
-    opacity: 0.92;
+    opacity: 1;
     clip-path: inset(var(--top) 0 var(--bottom) 0);
-    filter: saturate(1.32) contrast(0.98) blur(0.16px);
+    filter: saturate(1.32) contrast(1) blur(0.16px);
   }
 }
 
@@ -769,8 +769,8 @@ h2 {
     filter: saturate(1.05) contrast(0.9) blur(0.55px);
   }
   100% {
-    opacity: 0.38;
-    filter: saturate(1.18) contrast(0.95) blur(0.28px);
+    opacity: 1;
+    filter: saturate(1.32) contrast(1) blur(0.16px);
   }
 }
 
