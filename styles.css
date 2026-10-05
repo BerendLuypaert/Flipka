@@ -594,7 +594,7 @@ h2 {
   top: 50%;
   width: min(92%, 54rem);
   max-width: none;
-  filter: saturate(1.5) contrast(1.03) blur(0.12px);
+  filter: saturate(1.32) contrast(0.98) blur(0.16px);
   transform: translateY(-50%) scale(0.98) rotate(-3deg);
 }
 
@@ -602,144 +602,65 @@ h2 {
   z-index: 1;
   opacity: 0;
   mix-blend-mode: multiply;
-  filter: saturate(1.25) contrast(0.95) blur(0.35px);
-  animation: wallStain 1700ms 650ms ease-out forwards;
+  filter: saturate(1.08) contrast(0.9) blur(0.55px);
+  animation: wallStain 2500ms 250ms ease-out forwards;
 }
 
-.spray-art-reveal {
+.spray-stripe {
   z-index: 3;
   opacity: 0;
-  mix-blend-mode: hard-light;
-  animation: sprayReveal 2700ms 380ms steps(24, end) forwards;
-  -webkit-mask-image:
-    radial-gradient(circle at 8% 30%, #000 0 0.35rem, transparent 0.5rem),
-    radial-gradient(circle at 22% 62%, #000 0 0.26rem, transparent 0.44rem),
-    radial-gradient(circle at 42% 36%, #000 0 0.34rem, transparent 0.52rem),
-    radial-gradient(circle at 62% 68%, #000 0 0.22rem, transparent 0.38rem),
-    repeating-radial-gradient(circle at 36% 48%, #000 0 0.04rem, transparent 0.05rem 0.34rem),
-    linear-gradient(90deg, #000 0 100%);
-  mask-image:
-    radial-gradient(circle at 8% 30%, #000 0 0.35rem, transparent 0.5rem),
-    radial-gradient(circle at 22% 62%, #000 0 0.26rem, transparent 0.44rem),
-    radial-gradient(circle at 42% 36%, #000 0 0.34rem, transparent 0.52rem),
-    radial-gradient(circle at 62% 68%, #000 0 0.22rem, transparent 0.38rem),
-    repeating-radial-gradient(circle at 36% 48%, #000 0 0.04rem, transparent 0.05rem 0.34rem),
-    linear-gradient(90deg, #000 0 100%);
-  -webkit-mask-composite: source-over;
-  mask-composite: add;
-}
-
-.spray-overspray {
-  position: absolute;
-  left: -7%;
-  top: 20%;
-  z-index: 1;
-  width: min(88%, 52rem);
-  height: min(62%, 30rem);
-  opacity: 0;
-  filter: blur(5px) saturate(1.55);
-  mix-blend-mode: screen;
-  transform: rotate(-5deg);
-  background:
-    radial-gradient(circle at 12% 38%, rgba(166, 93, 212, 0.66) 0 0.18rem, transparent 0.32rem),
-    radial-gradient(circle at 25% 50%, rgba(237, 33, 104, 0.64) 0 0.15rem, transparent 0.3rem),
-    radial-gradient(circle at 48% 45%, rgba(19, 183, 146, 0.6) 0 0.17rem, transparent 0.29rem),
-    radial-gradient(circle at 62% 58%, rgba(255, 196, 0, 0.58) 0 0.14rem, transparent 0.27rem),
-    radial-gradient(ellipse at 42% 50%, rgba(237, 33, 104, 0.34), transparent 62%);
-  background-size: 1.25rem 1.25rem, 1.7rem 1.7rem, 1.45rem 1.45rem, 1.1rem 1.1rem, auto;
-  animation: oversprayReveal 1900ms 200ms ease-out forwards;
-}
-
-.spray-sweep {
-  position: absolute;
-  left: -18%;
-  top: 17%;
-  z-index: 4;
-  width: min(42rem, 84%);
-  height: min(23rem, 52%);
-  opacity: 0;
-  pointer-events: none;
-  filter: blur(7px) saturate(1.8);
-  mix-blend-mode: screen;
-  transform: rotate(-7deg) translateX(-20%);
-  background:
-    radial-gradient(ellipse at 18% 50%, rgba(255, 255, 255, 0.72), transparent 28%),
-    radial-gradient(circle at 34% 42%, rgba(237, 33, 104, 0.72) 0 0.22rem, transparent 0.44rem),
-    radial-gradient(circle at 41% 58%, rgba(166, 93, 212, 0.72) 0 0.2rem, transparent 0.42rem),
-    radial-gradient(circle at 54% 36%, rgba(255, 196, 0, 0.66) 0 0.18rem, transparent 0.4rem),
-    radial-gradient(circle at 64% 62%, rgba(19, 183, 146, 0.68) 0 0.2rem, transparent 0.42rem),
-    radial-gradient(ellipse at 48% 52%, rgba(237, 33, 104, 0.4), transparent 62%);
-  background-size: auto, 1.2rem 1.2rem, 1.6rem 1.6rem, 1.35rem 1.35rem, 1.5rem 1.5rem, auto;
-  animation: spraySweep 2700ms 250ms cubic-bezier(0.18, 0.8, 0.2, 1) forwards;
-}
-
-.spray-speckles {
-  position: absolute;
-  left: -8%;
-  top: 18%;
-  z-index: 2;
-  width: min(93%, 54rem);
-  height: min(66%, 32rem);
-  opacity: 0;
-  pointer-events: none;
-  mix-blend-mode: hard-light;
-  transform: rotate(-4deg);
-  background:
-    radial-gradient(circle at 8% 46%, rgba(237, 33, 104, 0.8) 0 0.08rem, transparent 0.16rem),
-    radial-gradient(circle at 14% 62%, rgba(166, 93, 212, 0.75) 0 0.07rem, transparent 0.14rem),
-    radial-gradient(circle at 22% 38%, rgba(255, 196, 0, 0.75) 0 0.09rem, transparent 0.18rem),
-    radial-gradient(circle at 38% 70%, rgba(19, 183, 146, 0.75) 0 0.08rem, transparent 0.16rem),
-    radial-gradient(circle at 55% 44%, rgba(237, 33, 104, 0.7) 0 0.07rem, transparent 0.15rem),
-    radial-gradient(circle at 72% 58%, rgba(166, 93, 212, 0.65) 0 0.08rem, transparent 0.16rem);
-  background-size: 1.1rem 1.1rem, 1.45rem 1.45rem, 1.7rem 1.7rem, 1.25rem 1.25rem, 1.6rem 1.6rem, 1.2rem 1.2rem;
-  animation: specklesIn 2500ms 430ms steps(10, end) forwards;
-}
-
-.spray-drip {
-  position: absolute;
-  z-index: 2;
-  width: 0.42rem;
-  border-radius: 999px;
-  opacity: 0;
-  transform-origin: top center;
-  filter: blur(0.2px);
   mix-blend-mode: multiply;
-  animation: dripIn 900ms 1700ms ease-out forwards;
+  animation: stripeReveal 2800ms var(--delay) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  clip-path: inset(var(--top) 100% var(--bottom) 0);
 }
 
-.spray-drip::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -0.32rem;
-  width: 0.72rem;
-  height: 0.72rem;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background: inherit;
+.spray-art-finish {
+  z-index: 4;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  animation: finishCoat 900ms 2550ms ease-out forwards;
 }
 
-.spray-drip-one {
-  left: 20%;
-  top: 67%;
-  height: 4.6rem;
-  background: rgba(166, 93, 212, 0.66);
+.stripe-one {
+  --top: 0%;
+  --bottom: 85%;
+  --delay: 180ms;
 }
 
-.spray-drip-two {
-  left: 37%;
-  top: 72%;
-  height: 3.2rem;
-  background: rgba(237, 33, 104, 0.58);
-  animation-delay: 1850ms;
+.stripe-two {
+  --top: 15%;
+  --bottom: 71%;
+  --delay: 360ms;
 }
 
-.spray-drip-three {
-  left: 54%;
-  top: 66%;
-  height: 4rem;
-  background: rgba(19, 183, 146, 0.58);
-  animation-delay: 1980ms;
+.stripe-three {
+  --top: 29%;
+  --bottom: 57%;
+  --delay: 110ms;
+}
+
+.stripe-four {
+  --top: 43%;
+  --bottom: 43%;
+  --delay: 520ms;
+}
+
+.stripe-five {
+  --top: 57%;
+  --bottom: 29%;
+  --delay: 300ms;
+}
+
+.stripe-six {
+  --top: 71%;
+  --bottom: 15%;
+  --delay: 680ms;
+}
+
+.stripe-seven {
+  --top: 85%;
+  --bottom: 0%;
+  --delay: 440ms;
 }
 
 .spray-cloud {
@@ -793,99 +714,50 @@ h2 {
   margin-top: 0.75rem;
 }
 
-@keyframes sprayReveal {
-  0% {
-    opacity: 0;
-    clip-path: polygon(0 0, 2% 8%, 5% 48%, 2% 100%, 0 100%);
-    transform: translateY(-50%) scale(0.96) rotate(-3deg);
-  }
-  12% {
-    opacity: 0.24;
-    clip-path: polygon(0 2%, 14% 0, 21% 23%, 13% 48%, 23% 75%, 12% 100%, 0 96%);
-  }
-  26% {
-    opacity: 0.42;
-    clip-path: polygon(0 0, 29% 2%, 40% 18%, 28% 43%, 43% 63%, 31% 98%, 0 100%);
-  }
-  48% {
-    opacity: 0.72;
-    clip-path: polygon(0 0, 52% 0, 66% 17%, 55% 39%, 70% 69%, 53% 100%, 0 95%);
-  }
-  74% {
-    opacity: 0.9;
-    clip-path: polygon(0 0, 78% 3%, 91% 22%, 77% 47%, 95% 76%, 82% 100%, 0 98%);
-  }
-  100% {
-    opacity: 0.92;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transform: translateY(-50%) scale(1) rotate(-3deg);
-  }
-}
-
 @keyframes wallStain {
   0% {
     opacity: 0;
     clip-path: inset(0 100% 0 0);
   }
   100% {
-    opacity: 0.42;
+    opacity: 0.24;
     clip-path: inset(0 0 0 0);
   }
 }
 
-@keyframes oversprayReveal {
+@keyframes stripeReveal {
   0% {
     opacity: 0;
-    clip-path: inset(0 100% 0 0);
+    clip-path: inset(var(--top) 100% var(--bottom) 0);
+    filter: saturate(1.05) contrast(0.9) blur(0.7px);
   }
-  40% {
-    opacity: 0.72;
+  18% {
+    opacity: 0.36;
+    clip-path: inset(var(--top) 74% var(--bottom) 0);
   }
-  100% {
-    opacity: 0.58;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes spraySweep {
-  0% {
-    opacity: 0;
-    transform: rotate(-7deg) translateX(-28%) scale(0.78);
-  }
-  12% {
-    opacity: 0.9;
-  }
-  62% {
+  42% {
     opacity: 0.74;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(-7deg) translateX(82%) scale(1.16);
-  }
-}
-
-@keyframes specklesIn {
-  0% {
-    opacity: 0;
-    clip-path: inset(0 100% 0 0);
+    clip-path: inset(var(--top) 48% var(--bottom) 0);
   }
   70% {
-    opacity: 0.82;
+    opacity: 0.9;
+    clip-path: inset(var(--top) 18% var(--bottom) 0);
   }
   100% {
-    opacity: 0.58;
-    clip-path: inset(0 0 0 0);
+    opacity: 0.92;
+    clip-path: inset(var(--top) 0 var(--bottom) 0);
+    filter: saturate(1.32) contrast(0.98) blur(0.16px);
   }
 }
 
-@keyframes dripIn {
+@keyframes finishCoat {
   0% {
     opacity: 0;
-    transform: scaleY(0);
+    filter: saturate(1.05) contrast(0.9) blur(0.55px);
   }
   100% {
-    opacity: 1;
-    transform: scaleY(1);
+    opacity: 0.38;
+    filter: saturate(1.18) contrast(0.95) blur(0.28px);
   }
 }
 
@@ -1127,13 +999,6 @@ h2 {
   .spray-art {
     left: -17%;
     width: 117%;
-  }
-
-  .spray-sweep,
-  .spray-speckles,
-  .spray-overspray {
-    left: -15%;
-    width: 118%;
   }
 
   .mural-copy h1 {
