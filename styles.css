@@ -550,10 +550,7 @@ h2 {
   overflow: visible;
   border: 1px solid rgba(9, 9, 9, 0.12);
   border-radius: 0.45rem;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0) 0 42%, rgba(246, 239, 228, 0.78) 67%, #f6efe4 100%),
-    linear-gradient(90deg, rgba(9, 9, 9, 0.3), rgba(9, 9, 9, 0.04) 45%, rgba(246, 239, 228, 0.92) 78%),
-    url("https://images.unsplash.com/photo-1519418482467-96eca39b3f1b?auto=format&fit=crop&fm=jpg&q=80&w=2400") left center / cover no-repeat;
+  background: #ffffff;
   box-shadow: var(--shadow);
 }
 
@@ -562,10 +559,7 @@ h2 {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 16% 35%, rgba(237, 33, 104, 0.18), transparent 17rem),
-    radial-gradient(circle at 37% 61%, rgba(19, 183, 146, 0.14), transparent 15rem),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18), transparent 52%);
+  background: transparent;
 }
 
 .mural-corner-blob {
@@ -1006,9 +1000,7 @@ h2 {
   .mural-showcase {
     gap: 1.6rem;
     padding: clamp(1.2rem, 5vw, 2rem);
-    background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0 40%, #f6efe4 68%, #f6efe4 100%),
-      url("https://images.unsplash.com/photo-1519418482467-96eca39b3f1b?auto=format&fit=crop&fm=jpg&q=80&w=1600") center top / cover no-repeat;
+    background: #ffffff;
   }
 
   .mural-corner-blob {
