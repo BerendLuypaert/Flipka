@@ -430,6 +430,73 @@ h2 {
   margin: 0.5rem 0 0;
 }
 
+.subpage {
+  min-height: calc(100vh - 6rem);
+  padding: clamp(3rem, 7vw, 7rem) clamp(1rem, 7vw, 8rem);
+}
+
+.subpage-hero {
+  max-width: 54rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.subpage-hero h1 {
+  max-width: 12ch;
+}
+
+.subpage-hero p:last-child {
+  max-width: 42rem;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.link-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 15.5rem;
+  padding: 1.3rem;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 42px rgba(68, 44, 20, 0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.link-card img {
+  align-self: center;
+  justify-self: center;
+  width: min(9rem, 86%);
+  height: 8rem;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 12px rgba(9, 9, 9, 0.12));
+}
+
+.link-card span {
+  display: block;
+  padding-right: 2rem;
+  font-size: 1.12rem;
+  font-weight: 900;
+}
+
+.link-card b {
+  position: absolute;
+  right: 1.15rem;
+  bottom: 1.15rem;
+  font-size: 1.35rem;
+}
+
 .maintenance-page {
   min-height: 100vh;
   display: grid;
@@ -532,6 +599,7 @@ h2 {
   }
 
   .service-grid,
+  .link-grid,
   .portfolio-strip,
   .newsletter,
   .site-footer {
@@ -574,6 +642,10 @@ h2 {
   }
 
   .service-card {
+    min-height: 13rem;
+  }
+
+  .link-card {
     min-height: 13rem;
   }
 }
