@@ -593,7 +593,7 @@ h2 {
   inset: -8%;
   z-index: 5;
   pointer-events: none;
-  opacity: 0.34;
+  opacity: 0;
   mix-blend-mode: multiply;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.18), transparent 18%, rgba(0, 0, 0, 0.12) 19%, transparent 21%),
