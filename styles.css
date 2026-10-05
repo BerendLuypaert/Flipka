@@ -570,22 +570,16 @@ h2 {
 
 .mural-corner-blob {
   position: absolute;
-  top: -1.05rem;
-  right: -2.7rem;
+  top: -1.4rem;
+  right: -1.65rem;
   z-index: 4;
-  width: clamp(8rem, 13vw, 13rem);
-  aspect-ratio: 1.32 / 1;
-  border-radius: 64% 36% 58% 42% / 46% 56% 44% 54%;
-  background:
-    radial-gradient(circle at 34% 29%, rgba(255, 255, 255, 0.62) 0 0.85rem, transparent 1.05rem),
-    radial-gradient(circle at 71% 69%, rgba(255, 255, 255, 0.26) 0 0.54rem, transparent 0.72rem),
-    linear-gradient(135deg, #d58aff 0%, #a65dd4 48%, #8a31ca 100%);
-  box-shadow:
-    inset -0.85rem -1rem 1.45rem rgba(90, 32, 132, 0.24),
-    inset 0.65rem 0.75rem 1.25rem rgba(255, 255, 255, 0.28),
-    0 1.15rem 2.3rem rgba(112, 44, 169, 0.14);
-  opacity: 0.94;
-  transform: rotate(-12deg);
+  width: clamp(8.4rem, 11vw, 10.8rem);
+  height: clamp(5.6rem, 7vw, 7.2rem);
+  background: radial-gradient(circle at 30% 30%, #baffef, #13b792 64%);
+  border-radius: 59% 41% 65% 35%;
+  box-shadow: 1.2rem 4rem 0 -3rem #13b792;
+  filter: saturate(1.1);
+  transform: rotate(-24deg);
   pointer-events: none;
 }
 
@@ -1018,9 +1012,10 @@ h2 {
   }
 
   .mural-corner-blob {
-    top: -0.9rem;
-    right: -2.1rem;
-    width: clamp(6rem, 26vw, 7.8rem);
+    top: -1rem;
+    right: -1.2rem;
+    width: 6.4rem;
+    height: 4.25rem;
   }
 
   .mural-wall-art {
