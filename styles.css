@@ -571,7 +571,7 @@ h2 {
 .mural-corner-blob {
   position: absolute;
   top: -1.35rem;
-  left: 41%;
+  right: -1.65rem;
   z-index: 4;
   width: 9rem;
   height: 6rem;
@@ -1013,7 +1013,7 @@ h2 {
 
   .mural-corner-blob {
     top: -1rem;
-    left: 39%;
+    right: -1.2rem;
     width: 6.4rem;
     height: 4.25rem;
   }
