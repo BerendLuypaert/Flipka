@@ -705,6 +705,62 @@ h2 {
   animation: sprayMist 1400ms 620ms ease-out forwards;
 }
 
+.paint-drip {
+  position: absolute;
+  z-index: 2;
+  width: 0.9rem;
+  height: 3.3rem;
+  border-radius: 58% 42% 62% 38% / 28% 28% 72% 72%;
+  opacity: 0.72;
+  transform-origin: top center;
+  filter: drop-shadow(0 0.25rem 0.22rem rgba(9, 9, 9, 0.12));
+  animation: dripFall 5.8s ease-in-out infinite alternate;
+}
+
+.paint-drip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.55rem;
+  width: 0.78rem;
+  height: 0.78rem;
+  border-radius: 50%;
+  background: inherit;
+  transform: translateX(-50%);
+}
+
+.paint-drip-purple {
+  left: 18%;
+  top: 35%;
+  background: linear-gradient(180deg, #b85cff, #7020b8);
+  animation-delay: -1.2s;
+}
+
+.paint-drip-pink {
+  left: 71%;
+  top: 31%;
+  height: 2.6rem;
+  background: linear-gradient(180deg, #ff78c7, #ed2168);
+  animation-delay: -3.1s;
+}
+
+.paint-drip-blue {
+  left: 82%;
+  top: 61%;
+  height: 2.2rem;
+  background: linear-gradient(180deg, #74ddff, #168bd0);
+  animation-delay: -2.3s;
+}
+
+.paint-drip-yellow {
+  left: 29%;
+  top: 68%;
+  width: 0.7rem;
+  height: 2rem;
+  background: linear-gradient(180deg, #ffe66a, #f5a900);
+  animation-delay: -4.4s;
+}
+
 .mural-copy {
   position: relative;
   z-index: 3;
@@ -785,6 +841,15 @@ h2 {
   100% {
     opacity: 0;
     transform: translateX(12rem) scale(1.25);
+  }
+}
+
+@keyframes dripFall {
+  0% {
+    transform: translateY(-0.15rem) scaleY(0.94);
+  }
+  100% {
+    transform: translateY(0.7rem) scaleY(1.08);
   }
 }
 
