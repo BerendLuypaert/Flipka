@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261005-clean-hero">
+    <link rel="stylesheet" href="styles.css?v=20261005-nav-dropdown">
   </head>
   <body>
     <header class="site-header">
@@ -21,7 +21,18 @@
       </button>
       <nav class="main-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="what-i-do.html">What I do</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            What I do <span aria-hidden="true">⌄</span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="murals.html">Murals</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="artwork.html">Artwork</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="on-demand.html">On demand</a>
+          </div>
+        </div>
         <a href="about-me.html?v=about-clean">About me</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -101,6 +112,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20261005-header-scroll"></script>
+    <script src="script.js?v=20261005-nav-dropdown"></script>
   </body>
 </html>
