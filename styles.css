@@ -550,7 +550,7 @@ h2 {
   overflow: visible;
   border: 1px solid rgba(9, 9, 9, 0.12);
   border-radius: 0.45rem;
-  background: #ffffff;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 38%, #f4fbff 70%, #e5f6ff 100%);
   box-shadow: var(--shadow);
 }
 
@@ -1000,7 +1000,7 @@ h2 {
   .mural-showcase {
     gap: 1.6rem;
     padding: clamp(1.2rem, 5vw, 2rem);
-    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 42%, #f4fbff 73%, #e5f6ff 100%);
   }
 
   .mural-corner-blob {
