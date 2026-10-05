@@ -64,12 +64,25 @@ img {
   background: rgba(250, 245, 236, 0.88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
+  transition: padding 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 
 .brand img {
   width: clamp(7rem, 9vw, 9.5rem);
   aspect-ratio: 4 / 3;
   object-fit: contain;
+  transition: width 200ms ease;
+}
+
+.site-header.is-scrolled {
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  background: rgba(250, 245, 236, 0.94);
+  box-shadow: 0 10px 35px rgba(9, 9, 9, 0.08);
+}
+
+.site-header.is-scrolled .brand img {
+  width: clamp(4.8rem, 6vw, 6.4rem);
 }
 
 .main-nav {
