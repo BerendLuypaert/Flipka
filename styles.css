@@ -547,7 +547,7 @@ h2 {
   gap: clamp(2rem, 5vw, 5rem);
   min-height: clamp(39rem, 78vh, 52rem);
   padding: clamp(2rem, 5vw, 5rem);
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(9, 9, 9, 0.12);
   border-radius: 0.45rem;
   background:
@@ -570,35 +570,38 @@ h2 {
 
 .mural-corner-blob {
   position: absolute;
-  top: clamp(-2.8rem, -3vw, -1.4rem);
-  right: clamp(4rem, 9vw, 8rem);
+  top: -3.2rem;
+  right: -3.7rem;
   z-index: 4;
-  width: clamp(8rem, 14vw, 13rem);
-  aspect-ratio: 1.05 / 1;
-  border-radius: 61% 39% 55% 45% / 48% 62% 38% 52%;
+  width: clamp(7.5rem, 11vw, 11rem);
+  aspect-ratio: 0.92 / 1;
+  border-radius: 63% 37% 48% 52% / 54% 44% 56% 46%;
   background:
-    radial-gradient(circle at 31% 25%, rgba(255, 255, 255, 0.82) 0 0.9rem, transparent 1rem),
-    radial-gradient(circle at 71% 67%, rgba(255, 255, 255, 0.38) 0 0.6rem, transparent 0.72rem),
-    linear-gradient(135deg, #13b792 0%, #47e0c4 44%, #0756d9 100%);
+    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.82) 0 0.75rem, transparent 0.88rem),
+    radial-gradient(circle at 70% 64%, rgba(255, 255, 255, 0.32) 0 0.48rem, transparent 0.62rem),
+    linear-gradient(135deg, #ff8a00 0%, #ed2168 48%, #a65dd4 100%);
   box-shadow:
-    inset -0.9rem -1rem 1.6rem rgba(7, 86, 217, 0.25),
+    inset -0.85rem -1rem 1.5rem rgba(166, 93, 212, 0.25),
     inset 0.65rem 0.75rem 1.3rem rgba(255, 255, 255, 0.3),
-    0 1.25rem 2.6rem rgba(7, 86, 217, 0.16);
+    0 1.25rem 2.6rem rgba(237, 33, 104, 0.15);
   opacity: 0.92;
-  transform: rotate(-16deg);
+  transform: rotate(19deg);
   pointer-events: none;
 }
 
 .mural-corner-blob::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -1.35rem;
-  width: 72%;
-  height: 2.4rem;
-  background: linear-gradient(180deg, rgba(246, 239, 228, 0.2), #f6efe4 48%);
-  border-radius: 48% 52% 50% 50%;
-  transform: translateX(-50%) rotate(-5deg);
+  left: 2.1rem;
+  bottom: -2.5rem;
+  width: 2.1rem;
+  height: 4rem;
+  border-radius: 999px 999px 70% 70%;
+  background: linear-gradient(180deg, #ed2168 0%, #a65dd4 100%);
+  box-shadow:
+    inset -0.28rem -0.4rem 0.8rem rgba(9, 9, 9, 0.12),
+    inset 0.22rem 0.28rem 0.6rem rgba(255, 255, 255, 0.26);
+  transform: rotate(-6deg);
 }
 
 .mural-wall-art {
@@ -1026,9 +1029,9 @@ h2 {
   }
 
   .mural-corner-blob {
-    top: -2.1rem;
-    right: 1.3rem;
-    width: clamp(6.2rem, 28vw, 8.2rem);
+    top: -2.2rem;
+    right: -2.3rem;
+    width: clamp(5.8rem, 24vw, 7rem);
   }
 
   .mural-wall-art {
