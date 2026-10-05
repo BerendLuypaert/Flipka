@@ -40,11 +40,13 @@ dropdowns.forEach((dropdown) => {
   button.addEventListener("click", (event) => {
     event.stopPropagation();
     const isOpen = dropdown.classList.toggle("is-open");
+    menu.hidden = !isOpen;
     button.setAttribute("aria-expanded", String(isOpen));
   });
 
   menu.addEventListener("click", () => {
     dropdown.classList.remove("is-open");
+    menu.hidden = true;
     button.setAttribute("aria-expanded", "false");
     header?.classList.remove("nav-open");
     toggle?.setAttribute("aria-expanded", "false");
@@ -54,6 +56,8 @@ dropdowns.forEach((dropdown) => {
 document.addEventListener("click", () => {
   dropdowns.forEach((dropdown) => {
     dropdown.classList.remove("is-open");
+    const menu = dropdown.querySelector(".nav-dropdown-menu");
+    if (menu) menu.hidden = true;
     dropdown.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
   });
 });
@@ -62,6 +66,8 @@ document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
   dropdowns.forEach((dropdown) => {
     dropdown.classList.remove("is-open");
+    const menu = dropdown.querySelector(".nav-dropdown-menu");
+    if (menu) menu.hidden = true;
     dropdown.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
   });
 });

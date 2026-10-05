@@ -4,15 +4,58 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Murals | Flipka</title>
-    <link rel="stylesheet" href="styles.css?v=20261005-header-scroll">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261005-murals-page">
   </head>
-  <body class="maintenance-page">
-    <main class="maintenance-card">
-      <img src="assets/icon-murals-trim.png" alt="">
-      <p class="eyebrow">Prototype page</p>
-      <h1>Murals</h1>
-      <p>Deze pagina staat in onderhoud. De aparte pagina is alvast toegevoegd voor het prototype.</p>
-      <a class="button button-dark" href="index.html">Terug naar home</a>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Flipka home">
+        <img src="assets/flipka-logo-color.png" alt="Flipka">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            What I do <span aria-hidden="true">⌄</span>
+          </button>
+          <div class="nav-dropdown-menu" hidden>
+            <a href="murals.html">Murals</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="artwork.html">Artwork</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="on-demand.html">On demand</a>
+          </div>
+        </div>
+        <a href="about-me.html?v=about-clean">About me</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="contact.html">Contact <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main class="mural-page">
+      <section class="mural-showcase" aria-labelledby="mural-title">
+        <div class="mural-wall" aria-label="Graffiti mural preview">
+          <div class="spray-cloud spray-cloud-one"></div>
+          <div class="spray-cloud spray-cloud-two"></div>
+          <img class="spray-art" src="assets/mural-graffiti-creature.png" alt="Colorful Flipka graffiti creature sprayed on a wall">
+        </div>
+
+        <div class="mural-copy">
+          <p class="eyebrow">Murals</p>
+          <h1 id="mural-title">Pimp your wall, room or entire building!</h1>
+          <p><strong>Do you want to give a wall, room or entire building a totally new, creative, original look with my gradually becoming famous murals?</strong></p>
+          <p><strong>Send me a message and we'll look at the possibilities.</strong></p>
+          <a class="button button-dark" href="contact.html">Contact me <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
     </main>
+
+    <script src="script.js?v=20261005-dropdown-hidden"></script>
   </body>
 </html>
