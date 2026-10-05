@@ -708,57 +708,42 @@ h2 {
 .paint-drip {
   position: absolute;
   z-index: 2;
-  width: 0.9rem;
-  height: 3.3rem;
-  border-radius: 58% 42% 62% 38% / 28% 28% 72% 72%;
-  opacity: 0.72;
+  width: 0.82rem;
+  height: 0.82rem;
+  border-radius: 50%;
+  opacity: 0;
   transform-origin: top center;
   filter: drop-shadow(0 0.25rem 0.22rem rgba(9, 9, 9, 0.12));
-  animation: dripFall 5.8s ease-in-out infinite alternate;
-}
-
-.paint-drip::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -0.55rem;
-  width: 0.78rem;
-  height: 0.78rem;
-  border-radius: 50%;
-  background: inherit;
-  transform: translateX(-50%);
+  animation: dripFall 7.2s 3.8s ease-in-out infinite;
 }
 
 .paint-drip-purple {
   left: 18%;
   top: 35%;
   background: linear-gradient(180deg, #b85cff, #7020b8);
-  animation-delay: -1.2s;
+  animation-delay: 3.8s;
 }
 
 .paint-drip-pink {
-  left: 71%;
+  left: 61%;
   top: 31%;
-  height: 2.6rem;
   background: linear-gradient(180deg, #ff78c7, #ed2168);
-  animation-delay: -3.1s;
+  animation-delay: 5.2s;
 }
 
 .paint-drip-blue {
-  left: 82%;
+  left: 56%;
   top: 61%;
-  height: 2.2rem;
   background: linear-gradient(180deg, #74ddff, #168bd0);
-  animation-delay: -2.3s;
+  animation-delay: 4.6s;
 }
 
 .paint-drip-yellow {
   left: 29%;
   top: 68%;
   width: 0.7rem;
-  height: 2rem;
   background: linear-gradient(180deg, #ffe66a, #f5a900);
-  animation-delay: -4.4s;
+  animation-delay: 6.1s;
 }
 
 .mural-copy {
@@ -846,10 +831,34 @@ h2 {
 
 @keyframes dripFall {
   0% {
-    transform: translateY(-0.15rem) scaleY(0.94);
+    opacity: 0;
+    height: 0.82rem;
+    border-radius: 50%;
+    transform: translateY(0) scaleX(1);
+  }
+  12% {
+    opacity: 0.82;
+    height: 0.9rem;
+    border-radius: 50% 50% 58% 42%;
+    transform: translateY(0.05rem) scaleX(1);
+  }
+  32% {
+    opacity: 0.86;
+    height: 1.7rem;
+    border-radius: 48% 52% 65% 35%;
+    transform: translateY(0.35rem) scaleX(0.88);
+  }
+  72% {
+    opacity: 0.78;
+    height: 3.2rem;
+    border-radius: 45% 55% 68% 32%;
+    transform: translateY(1.9rem) scaleX(0.72);
   }
   100% {
-    transform: translateY(0.7rem) scaleY(1.08);
+    opacity: 0;
+    height: 3.8rem;
+    border-radius: 42% 58% 70% 30%;
+    transform: translateY(3.7rem) scaleX(0.62);
   }
 }
 
