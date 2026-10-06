@@ -529,7 +529,7 @@ h2 {
   z-index: 0;
   width: 100%;
   margin: 0;
-  background: var(--paper-strong);
+  background: #ffffff;
 }
 
 .workshop-banner video {
@@ -548,7 +548,7 @@ h2 {
   gap: clamp(2rem, 7vw, 8rem);
   min-height: clamp(34rem, 70vh, 48rem);
   padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
-  background: linear-gradient(125deg, #fffaf1 0%, #fffaf1 53%, #e9fbf5 100%);
+  background: #ffffff;
 }
 
 .workshop-hero-copy {
