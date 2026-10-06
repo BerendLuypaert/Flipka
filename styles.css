@@ -581,6 +581,15 @@ h2 {
   border-radius: 43% 57% 54% 46% / 56% 42% 58% 44%;
 }
 
+.workshop-hero-note img {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 54%;
+  transform: translateX(-50%) rotate(-8deg);
+  filter: drop-shadow(0 0.8rem 0.6rem rgba(9, 9, 9, 0.14));
+}
+
 .workshop-hero-note span,
 .workshop-hero-note strong {
   position: relative;
@@ -589,13 +598,13 @@ h2 {
 }
 
 .workshop-hero-note span {
-  margin-bottom: -4.5rem;
+  margin-top: 7rem;
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 800;
 }
 
 .workshop-hero-note strong {
-  margin-top: -1rem;
+  margin-top: -0.6rem;
   font-size: clamp(2.6rem, 5vw, 5rem);
   line-height: 0.85;
   text-align: center;
