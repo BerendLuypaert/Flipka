@@ -532,7 +532,7 @@ h2 {
   background: var(--paper-strong);
 }
 
-.workshop-banner img {
+.workshop-banner video {
   display: block;
   width: 100%;
   max-width: none;
