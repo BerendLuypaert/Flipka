@@ -124,39 +124,25 @@ img {
   cursor: pointer;
 }
 
-.nav-dropdown-toggle span {
-  position: relative;
+.nav-dropdown-toggle .chevron-icon {
   width: 0.65rem;
   height: 0.65rem;
   transition: transform 200ms ease;
 }
 
-.chevron-icon::before,
-.chevron-icon::after {
-  content: "";
-  position: absolute;
-  top: 0.24rem;
-  width: 0.42rem;
-  height: 1px;
-  background: currentColor;
+.chevron-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.chevron-icon::before {
-  left: 0;
-  transform: rotate(45deg);
-}
-
-.chevron-icon::after {
-  right: 0;
-  transform: rotate(-45deg);
-}
-
-.nav-dropdown.is-open .nav-dropdown-toggle span {
+.nav-dropdown.is-open .nav-dropdown-toggle .chevron-icon {
   transform: rotate(180deg);
 }
 
 .arrow-icon {
-  position: relative;
   display: inline-block;
   flex: 0 0 1rem;
   width: 1rem;
@@ -164,31 +150,12 @@ img {
   color: currentColor;
 }
 
-.arrow-icon::before,
-.arrow-icon::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background: currentColor;
-}
-
-.arrow-icon::before {
-  top: 0.48rem;
-  left: 0.08rem;
-  width: 0.8rem;
-  height: 1.5px;
-  transform: rotate(-45deg);
-  transform-origin: right center;
-}
-
-.arrow-icon::after {
-  top: 0.16rem;
-  right: 0.05rem;
-  width: 0.42rem;
-  height: 0.42rem;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  background: transparent;
+.arrow-icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .nav-dropdown-menu {
@@ -440,6 +407,12 @@ h2 {
   right: 1.35rem;
   bottom: 1.35rem;
   font-size: 1.55rem;
+}
+
+.service-card .service-arrow {
+  position: absolute;
+  right: 1.35rem;
+  bottom: 1.35rem;
 }
 
 .card-art {
