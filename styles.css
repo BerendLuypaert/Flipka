@@ -524,13 +524,14 @@ h2 {
 }
 
 .workshop-banner {
-  width: min(100% - clamp(2rem, 14vw, 16rem), 88rem);
-  margin: clamp(1rem, 3vw, 2.5rem) auto 0;
+  width: 100%;
+  margin: 0;
 }
 
 .workshop-banner img {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
 }
 
