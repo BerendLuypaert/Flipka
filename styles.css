@@ -590,26 +590,6 @@ h2 {
   filter: drop-shadow(0 0.8rem 0.6rem rgba(9, 9, 9, 0.14));
 }
 
-.workshop-hero-note span,
-.workshop-hero-note strong {
-  position: relative;
-  z-index: 1;
-  transform: rotate(-8deg);
-}
-
-.workshop-hero-note span {
-  margin-top: 7rem;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  font-weight: 800;
-}
-
-.workshop-hero-note strong {
-  margin-top: -0.6rem;
-  font-size: clamp(2.6rem, 5vw, 5rem);
-  line-height: 0.85;
-  text-align: center;
-}
-
 .workshop-offer {
   padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
 }
