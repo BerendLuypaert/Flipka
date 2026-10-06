@@ -526,6 +526,7 @@ h2 {
 .workshop-banner {
   width: 100%;
   margin: 0;
+  background: var(--paper-strong);
 }
 
 .workshop-banner img {
