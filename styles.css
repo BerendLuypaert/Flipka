@@ -933,11 +933,38 @@ h2 {
   border: 1px solid rgba(9, 9, 9, 0.14);
   border-radius: 47% 53% 58% 42% / 42% 44% 56% 58%;
   background:
-    radial-gradient(circle at 26% 25%, rgba(255, 255, 255, 0.75) 0 0.45rem, transparent 0.5rem),
-    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.68) 0 0.8rem, transparent 0.86rem),
-    #ffc7e1;
+    radial-gradient(circle at 26% 25%, rgba(255, 255, 255, 0.82) 0 0.45rem, transparent 0.5rem),
+    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.7) 0 0.8rem, transparent 0.86rem),
+    radial-gradient(circle at 78% 20%, rgba(255, 196, 0, 0.95) 0 2.4rem, transparent 2.5rem),
+    linear-gradient(145deg, #ffd0e6 0%, #ead8ff 52%, #c9f7e8 100%);
   box-shadow: 1.3rem 1.3rem 0 -0.3rem var(--green), 0 24px 55px rgba(68, 44, 20, 0.14);
   transform: rotate(5deg);
+}
+
+.shoes-hero-art::before,
+.shoes-hero-art::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.shoes-hero-art::before {
+  top: 13%;
+  left: 8%;
+  width: 5rem;
+  height: 1.2rem;
+  border-radius: 1rem;
+  background: var(--blue);
+  transform: rotate(-24deg);
+}
+
+.shoes-hero-art::after {
+  right: 9%;
+  bottom: 13%;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.9rem solid var(--pink);
+  border-radius: 50%;
 }
 
 .shoes-hero-sticker {
@@ -959,6 +986,18 @@ h2 {
   letter-spacing: 0.1em;
   text-align: center;
   transform: rotate(14deg);
+}
+
+.shoes-hero-image {
+  position: absolute;
+  right: -11%;
+  bottom: -2%;
+  z-index: 2;
+  display: block;
+  width: 116%;
+  max-width: none;
+  filter: drop-shadow(0 1.2rem 0.8rem rgba(9, 9, 9, 0.2));
+  transform: rotate(-5deg);
 }
 
 .shoe-illustration {
@@ -2579,6 +2618,12 @@ h2 {
     width: 4.3rem;
     height: 4.3rem;
     font-size: 0.6rem;
+  }
+
+  .shoes-hero-image {
+    right: -16%;
+    bottom: 2%;
+    width: 124%;
   }
 
   .shoes-offer {
