@@ -898,7 +898,8 @@ h2 {
   backface-visibility: hidden;
   transform-origin: left center;
   transform-style: preserve-3d;
-  transition: transform 780ms cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 300ms ease;
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 420ms ease;
+  will-change: transform;
   cursor: pointer;
   pointer-events: none;
 }
@@ -921,6 +922,43 @@ h2 {
   background: currentColor;
   content: "";
   opacity: 0.18;
+}
+
+.artwork-book-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.artwork-principle-pink {
+  background:
+    radial-gradient(circle at 92% 14%, rgba(237, 33, 104, 0.92) 0 3.5rem, transparent 3.62rem),
+    radial-gradient(circle at 86% 23%, rgba(255, 196, 0, 0.95) 0 1rem, transparent 1.08rem),
+    #ffd5e7;
+  box-shadow: 0 20px 42px rgba(237, 33, 104, 0.16);
+}
+
+.artwork-principle-green {
+  background:
+    radial-gradient(circle at 91% 15%, rgba(255, 196, 0, 0.94) 0 3.8rem, transparent 3.92rem),
+    radial-gradient(circle at 80% 26%, rgba(7, 86, 217, 0.92) 0 1.2rem, transparent 1.28rem),
+    #c9f7e8;
+  box-shadow: 0 20px 42px rgba(19, 183, 146, 0.16);
+}
+
+.artwork-principle-purple {
+  background:
+    radial-gradient(circle at 91% 15%, rgba(237, 33, 104, 0.9) 0 3.7rem, transparent 3.82rem),
+    radial-gradient(circle at 80% 27%, rgba(19, 183, 146, 0.9) 0 1.1rem, transparent 1.18rem),
+    #ead8ff;
+  box-shadow: 0 20px 42px rgba(166, 93, 212, 0.17);
+}
+
+.artwork-principle-pink h3,
+.artwork-principle-green h3,
+.artwork-principle-purple h3 {
+  max-width: 22rem;
+  font-size: clamp(2.2rem, 6vw, 4.7rem);
+  letter-spacing: -0.045em;
 }
 
 .artwork-book-cover {
