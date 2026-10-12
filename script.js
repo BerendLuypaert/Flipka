@@ -89,7 +89,7 @@ if (flipbook && flipbookScroll) {
 
     pages.forEach((page, index) => {
       page.classList.toggle("is-current", index === currentPage);
-      page.classList.toggle("is-flipped", index < currentPage);
+      page.classList.toggle("is-flipped", index !== currentPage);
       page.style.zIndex = String(index < currentPage ? index + 1 : pages.length - index);
     });
   };
