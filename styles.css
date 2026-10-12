@@ -939,7 +939,7 @@ h2 {
 }
 
 .artwork-book-cover > div {
-  width: 52%;
+  width: 46%;
 }
 
 .artwork-book-cover .artwork-book-page-art {
@@ -957,23 +957,23 @@ h2 {
 .artwork-principle-green h3,
 .artwork-principle-green p,
 .artwork-principle-green small {
-  max-width: 54%;
+  max-width: 48%;
 }
 
 .artwork-principle-pink .artwork-book-page-art {
-  right: 1%;
+  right: -2%;
   bottom: 2%;
-  width: 45%;
-  height: 64%;
+  width: 38%;
+  height: 59%;
   object-fit: contain;
   transform: rotate(5deg);
 }
 
 .artwork-principle-green .artwork-book-page-art {
-  right: 0;
+  right: -2%;
   bottom: 2%;
-  width: 47%;
-  height: 68%;
+  width: 40%;
+  height: 62%;
   object-fit: contain;
   transform: rotate(-4deg);
 }
