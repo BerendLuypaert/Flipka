@@ -923,6 +923,33 @@ h2 {
   opacity: 0.18;
 }
 
+.artwork-book-cover {
+  justify-content: space-between;
+  background: var(--ink);
+  color: white;
+}
+
+.artwork-book-cover::before {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  content: "";
+}
+
+.artwork-book-cover .eyebrow {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.artwork-book-cover h3 {
+  max-width: 24rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
 .artwork-book-page span {
   display: block;
   font-size: 0.8rem;
