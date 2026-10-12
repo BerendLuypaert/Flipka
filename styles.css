@@ -1912,6 +1912,220 @@ h2 {
   color: var(--pink);
 }
 
+.contact-main {
+  overflow: clip;
+}
+
+.contact-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(22rem, 0.78fr);
+  align-items: center;
+  gap: clamp(2rem, 8vw, 8rem);
+  min-height: clamp(38rem, 78vh, 52rem);
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 196, 0, 0.35), transparent 17rem),
+    linear-gradient(135deg, #fffaf1 0%, #f0e3ff 48%, #d2f8ea 100%);
+}
+
+.contact-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 42rem;
+}
+
+.contact-copy h1 {
+  max-width: 9ch;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.87;
+  letter-spacing: -0.06em;
+}
+
+.contact-lead {
+  max-width: 35rem;
+  margin: 1.6rem 0 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.contact-scribble {
+  position: relative;
+  min-height: min(36rem, 52vw);
+  isolation: isolate;
+}
+
+.contact-scribble::before {
+  position: absolute;
+  inset: 7% 8% 9% 4%;
+  z-index: -1;
+  border: 3px solid var(--ink);
+  border-radius: 44% 56% 48% 52%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), transparent 38%),
+    var(--purple);
+  box-shadow: var(--shadow);
+  content: "";
+  transform: rotate(-4deg);
+}
+
+.contact-scribble::after {
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  width: 8rem;
+  height: 5rem;
+  border-radius: 58% 42% 38% 62%;
+  background: var(--orange);
+  content: "";
+  transform: rotate(18deg);
+}
+
+.contact-scribble-dot {
+  position: absolute;
+  display: block;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+}
+
+.contact-scribble-dot-pink {
+  top: 5%;
+  right: 5%;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: var(--pink);
+  transform: rotate(14deg);
+}
+
+.contact-scribble-dot-yellow {
+  bottom: 8%;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  background: var(--yellow);
+  transform: rotate(-18deg);
+}
+
+.contact-scribble-dot-green {
+  top: 34%;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--green);
+}
+
+.contact-note-card {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  display: grid;
+  width: min(19rem, 62%);
+  min-height: 14rem;
+  align-content: center;
+  padding: 1.5rem;
+  border: 3px solid var(--ink);
+  border-radius: 0.45rem;
+  background: var(--paper-strong);
+  box-shadow: 0.7rem 0.7rem 0 rgba(9, 9, 9, 0.2);
+  transform: rotate(7deg);
+}
+
+.contact-note-card span {
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-note-card strong {
+  margin-top: 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.contact-scribble-word {
+  position: absolute;
+  right: 7%;
+  bottom: 11%;
+  color: var(--ink);
+  font-size: clamp(2.4rem, 6vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  transform: rotate(-12deg);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(5rem, 9vw, 9rem) clamp(1rem, 7vw, 8rem);
+  background: var(--paper);
+}
+
+.contact-detail-intro h2 {
+  max-width: 8ch;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.contact-detail-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-detail {
+  position: relative;
+  display: grid;
+  gap: 0.4rem;
+  min-height: 8rem;
+  padding: 1.35rem 4rem 1.35rem 1.5rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.45rem;
+  background: var(--paper-strong);
+  box-shadow: 0.45rem 0.45rem 0 rgba(9, 9, 9, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-detail:nth-child(1) { transform: rotate(-1.2deg); }
+.contact-detail:nth-child(2) { transform: translateX(1rem) rotate(1deg); }
+.contact-detail:nth-child(3) { transform: rotate(-0.7deg); }
+
+.contact-detail:hover {
+  box-shadow: 0.7rem 0.7rem 0 rgba(9, 9, 9, 0.16);
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.contact-detail:nth-child(2):hover { transform: translate(1rem, -3px) rotate(1deg); }
+
+.contact-detail-label {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-detail strong {
+  font-size: clamp(1.25rem, 2.4vw, 2.2rem);
+}
+
+.contact-detail-arrow {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.3rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.contact-detail-pink { background: #ffd5e7; }
+
 .about-page {
   overflow: clip;
 }
@@ -3515,6 +3729,8 @@ h2 {
   .about-story,
   .about-principles,
   .about-cta,
+  .contact-hero,
+  .contact-details,
   .on-demand-hero,
   .on-demand-cta {
     grid-template-columns: 1fr;
@@ -3606,6 +3822,20 @@ h2 {
   .about-hero-image {
     width: min(34rem, 100%);
     justify-self: center;
+  }
+
+  .contact-hero {
+    gap: 3rem;
+  }
+
+  .contact-scribble {
+    width: min(34rem, 100%);
+    min-height: 28rem;
+    justify-self: center;
+  }
+
+  .contact-details {
+    gap: 3rem;
   }
 
   .on-demand-project-grid {
@@ -3719,6 +3949,62 @@ h2 {
     width: 6.5rem;
     height: 6.5rem;
     font-size: 0.65rem;
+  }
+
+  .contact-hero {
+    min-height: auto;
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .contact-copy h1 {
+    font-size: clamp(3.4rem, 17vw, 5.4rem);
+  }
+
+  .contact-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-actions .button {
+    width: 100%;
+  }
+
+  .contact-scribble {
+    min-height: 23rem;
+  }
+
+  .contact-note-card {
+    top: 22%;
+    left: 10%;
+    width: 68%;
+    min-height: 11rem;
+    padding: 1.1rem;
+  }
+
+  .contact-scribble-word {
+    right: 5%;
+    bottom: 8%;
+    font-size: clamp(2.5rem, 15vw, 4.5rem);
+  }
+
+  .contact-details {
+    gap: 2.5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .contact-detail-intro h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .contact-detail:nth-child(2) {
+    transform: rotate(1deg);
+  }
+
+  .contact-detail:nth-child(2):hover {
+    transform: translateY(-3px) rotate(1deg);
   }
 
   .about-story {
