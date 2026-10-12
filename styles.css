@@ -1912,6 +1912,293 @@ h2 {
   color: var(--pink);
 }
 
+.about-page {
+  overflow: clip;
+}
+
+.about-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 0.78fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 8rem);
+  min-height: clamp(42rem, 82vh, 58rem);
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255, 196, 0, 0.22), transparent 18rem),
+    linear-gradient(135deg, #fffaf1 0%, #e7dcff 52%, #d5faed 100%);
+}
+
+.about-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 42rem;
+}
+
+.about-hero h1 {
+  max-width: 8ch;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+.about-hero-copy > p:not(.eyebrow) {
+  max-width: 37rem;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.about-hero-copy .about-hero-lead {
+  margin-top: 1.5rem;
+  font-weight: 800;
+}
+
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.about-hero-image {
+  position: relative;
+  z-index: 1;
+  width: min(42vw, 34rem);
+  margin: 0;
+  justify-self: end;
+  transform: rotate(3deg);
+}
+
+.about-hero-image::before {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 9rem;
+  height: 6rem;
+  border-radius: 59% 41% 65% 35%;
+  background: radial-gradient(circle at 30% 30%, #a6f6df, var(--green) 64%);
+  content: "";
+  transform: rotate(-24deg);
+}
+
+.about-hero-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 0.82;
+  border: 3px solid var(--ink);
+  border-radius: 0.45rem;
+  object-fit: cover;
+  object-position: 57% center;
+  box-shadow: var(--shadow);
+  clip-path: polygon(8% 0, 100% 0, 100% 94%, 0 100%, 0 10%);
+}
+
+.about-hero-sticker {
+  position: absolute;
+  right: -4rem;
+  bottom: 12%;
+  z-index: 3;
+  display: grid;
+  width: 8.5rem;
+  height: 8.5rem;
+  place-items: center;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(12deg);
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 9rem);
+  padding: clamp(5rem, 10vw, 10rem) clamp(1rem, 7vw, 8rem);
+  background: var(--paper);
+}
+
+.about-story-heading h2,
+.about-principles-intro h2 {
+  max-width: 10ch;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.about-story-copy {
+  max-width: 42rem;
+  align-self: end;
+}
+
+.about-story-copy p {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.about-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  padding: 0 clamp(1rem, 7vw, 8rem) clamp(5rem, 10vw, 10rem);
+  background: var(--paper);
+}
+
+.about-photo {
+  position: relative;
+  margin: 0;
+}
+
+.about-photo-detail {
+  grid-column: span 5;
+  transform: rotate(-1.5deg);
+}
+
+.about-photo-portrait {
+  grid-column: span 3;
+  transform: translateY(3rem) rotate(2deg);
+}
+
+.about-photo-skateboards {
+  grid-column: span 4;
+  transform: rotate(-1deg);
+}
+
+.about-photo img {
+  width: 100%;
+  height: clamp(20rem, 38vw, 34rem);
+  border: 3px solid var(--ink);
+  border-radius: 0.45rem;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.about-photo-detail img {
+  object-position: 58% center;
+}
+
+.about-photo-portrait img {
+  height: clamp(24rem, 43vw, 38rem);
+  object-position: 52% center;
+}
+
+.about-photo-skateboards img {
+  object-position: center;
+}
+
+.about-photo figcaption {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.55rem 0.7rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--paper-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.about-principles {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(5rem, 9vw, 9rem) clamp(1rem, 7vw, 8rem);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(237, 33, 104, 0.14), transparent 18rem),
+    var(--paper-strong);
+}
+
+.about-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-principle {
+  min-height: 15rem;
+  padding: 1.4rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.45rem;
+  box-shadow: 0.55rem 0.55rem 0 rgba(9, 9, 9, 0.14);
+}
+
+.about-principle:nth-child(2) {
+  transform: translateY(1.4rem) rotate(1.5deg);
+}
+
+.about-principle:nth-child(3) {
+  transform: rotate(-1.5deg);
+}
+
+.about-principle span {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.about-principle h3 {
+  margin: 3rem 0 0;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  line-height: 0.95;
+}
+
+.about-principle p {
+  margin: 0.8rem 0 0;
+  line-height: 1.45;
+}
+
+.about-principle-pink { background: #ffd5e7; }
+.about-principle-yellow { background: #fff0b6; }
+.about-principle-green { background: #c9f7e8; }
+
+.about-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  margin: 0 clamp(1rem, 7vw, 8rem) clamp(4rem, 8vw, 8rem);
+  padding: clamp(2rem, 5vw, 5rem);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  background:
+    radial-gradient(circle at 92% 15%, rgba(255, 196, 0, 0.95) 0 3.8rem, transparent 3.92rem),
+    radial-gradient(circle at 78% 80%, rgba(19, 183, 146, 0.9) 0 1.5rem, transparent 1.58rem),
+    var(--ink);
+}
+
+.about-cta h2 {
+  max-width: 9ch;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.about-cta .eyebrow {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.about-cta-copy {
+  max-width: 39rem;
+  align-self: end;
+}
+
+.about-cta-copy p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.about-cta .button {
+  margin-top: 0.7rem;
+}
+
 .on-demand-cta {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -3225,6 +3512,10 @@ h2 {
   .shoes-hero,
   .shoes-offer,
   .shoes-process,
+  .about-hero,
+  .about-story,
+  .about-principles,
+  .about-cta,
   .on-demand-hero,
   .on-demand-cta {
     grid-template-columns: 1fr;
@@ -3313,6 +3604,11 @@ h2 {
     justify-self: center;
   }
 
+  .about-hero-image {
+    width: min(34rem, 100%);
+    justify-self: center;
+  }
+
   .on-demand-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3392,6 +3688,99 @@ h2 {
 
   .shoes-hero h1 {
     font-size: clamp(3.2rem, 16vw, 5.2rem);
+  }
+
+  .about-hero {
+    min-height: auto;
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(3.4rem, 17vw, 5.4rem);
+  }
+
+  .about-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .about-hero-actions .button {
+    width: 100%;
+  }
+
+  .about-hero-image {
+    width: 100%;
+    transform: rotate(2deg);
+  }
+
+  .about-hero-sticker {
+    right: -0.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    font-size: 0.65rem;
+  }
+
+  .about-story {
+    gap: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .about-story-heading h2,
+  .about-principles-intro h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .about-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .about-photo-detail,
+  .about-photo-portrait,
+  .about-photo-skateboards {
+    grid-column: span 1;
+    transform: rotate(-1deg);
+  }
+
+  .about-photo-portrait {
+    transform: rotate(1.2deg);
+  }
+
+  .about-photo img,
+  .about-photo-portrait img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-principles {
+    gap: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .about-principle-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .about-principle:nth-child(2),
+  .about-principle:nth-child(3) {
+    transform: none;
+  }
+
+  .about-principle h3 {
+    margin-top: 2.5rem;
+  }
+
+  .about-cta {
+    gap: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 1.5rem;
   }
 
   .on-demand-hero {
