@@ -528,9 +528,9 @@ h2 {
   top: 0;
   z-index: 0;
   width: 100%;
-  height: clamp(8.5rem, 26vw, 22rem);
+  height: auto;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   background: #ffffff;
 }
 
@@ -538,8 +538,8 @@ h2 {
   display: block;
   width: 100%;
   max-width: none;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
 }
 
