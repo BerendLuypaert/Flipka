@@ -2020,47 +2020,6 @@ h2 {
   background: var(--green);
 }
 
-.contact-note-card {
-  position: absolute;
-  top: 25%;
-  left: 18%;
-  display: grid;
-  width: min(19rem, 62%);
-  min-height: 14rem;
-  align-content: center;
-  padding: 1.5rem;
-  border: 3px solid var(--ink);
-  border-radius: 0.45rem;
-  background: var(--paper-strong);
-  box-shadow: 0.7rem 0.7rem 0 rgba(9, 9, 9, 0.2);
-  transform: rotate(7deg);
-}
-
-.contact-note-card span {
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.contact-note-card strong {
-  margin-top: 1rem;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 0.9;
-  letter-spacing: -0.05em;
-}
-
-.contact-scribble-word {
-  position: absolute;
-  right: 7%;
-  bottom: 11%;
-  color: var(--ink);
-  font-size: clamp(2.4rem, 6vw, 6rem);
-  font-weight: 900;
-  letter-spacing: -0.08em;
-  transform: rotate(-12deg);
-}
-
 .contact-details {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
@@ -2371,6 +2330,71 @@ h2 {
 .about-principle-pink { background: #ffd5e7; }
 .about-principle-yellow { background: #fff0b6; }
 .about-principle-green { background: #c9f7e8; }
+
+.about-reviews {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(5rem, 9vw, 9rem) clamp(1rem, 7vw, 8rem);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(255, 196, 0, 0.18), transparent 16rem),
+    var(--paper);
+}
+
+.about-reviews-intro h2 {
+  max-width: 9ch;
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.about-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-review {
+  display: flex;
+  min-height: 26rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.35rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.45rem;
+  box-shadow: 0.55rem 0.55rem 0 rgba(9, 9, 9, 0.14);
+}
+
+.about-review:nth-child(2) { transform: translateY(1.5rem) rotate(1.4deg); }
+.about-review:nth-child(3) { transform: rotate(-1.2deg); }
+
+.about-review blockquote {
+  margin: 0;
+  font-size: clamp(0.96rem, 1.25vw, 1.1rem);
+  line-height: 1.5;
+}
+
+.about-review footer {
+  display: grid;
+  gap: 0.2rem;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(9, 9, 9, 0.18);
+}
+
+.about-review footer strong {
+  font-size: 1rem;
+}
+
+.about-review footer span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.about-review-pink { background: #ffd5e7; }
+.about-review-yellow { background: #fff0b6; }
+.about-review-green { background: #c9f7e8; }
 
 .about-cta {
   display: grid;
@@ -3728,6 +3752,7 @@ h2 {
   .about-hero,
   .about-story,
   .about-principles,
+  .about-reviews,
   .about-cta,
   .contact-hero,
   .contact-details,
@@ -3836,6 +3861,10 @@ h2 {
 
   .contact-details {
     gap: 3rem;
+  }
+
+  .about-review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .on-demand-project-grid {
@@ -3975,20 +4004,6 @@ h2 {
     min-height: 23rem;
   }
 
-  .contact-note-card {
-    top: 22%;
-    left: 10%;
-    width: 68%;
-    min-height: 11rem;
-    padding: 1.1rem;
-  }
-
-  .contact-scribble-word {
-    right: 5%;
-    bottom: 8%;
-    font-size: clamp(2.5rem, 15vw, 4.5rem);
-  }
-
   .contact-details {
     gap: 2.5rem;
     padding-top: 4.5rem;
@@ -4054,6 +4069,30 @@ h2 {
 
   .about-principle:nth-child(2),
   .about-principle:nth-child(3) {
+    transform: none;
+  }
+
+  .about-reviews {
+    gap: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .about-reviews-intro h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .about-review-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .about-review {
+    min-height: 0;
+  }
+
+  .about-review:nth-child(2),
+  .about-review:nth-child(3) {
     transform: none;
   }
 
