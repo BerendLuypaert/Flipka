@@ -1558,7 +1558,7 @@ h2 {
 
 .on-demand-hero-image {
   position: relative;
-  width: min(62vw, 64rem);
+  width: min(54vw, 64rem);
   min-height: min(45rem, 64vw);
   margin: 0;
   justify-self: end;
@@ -1569,9 +1569,9 @@ h2 {
 .on-demand-hero-image > img:first-child {
   position: absolute;
   top: 50%;
-  right: -8vw;
-  width: min(62vw, 64rem);
-  height: min(43vw, 42rem);
+  right: -5vw;
+  width: min(54vw, 64rem);
+  height: min(40vw, 40rem);
   object-fit: cover;
   object-position: 50% 45%;
   transform: translateY(-50%) rotate(-2deg);
