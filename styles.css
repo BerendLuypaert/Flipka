@@ -1582,8 +1582,8 @@ h2 {
 
 .on-demand-hero-image .on-demand-hero-art {
   position: absolute;
-  top: -1rem;
-  right: min(6vw, 5rem);
+  top: -2.5rem;
+  right: 24%;
   z-index: 3;
   display: block;
   width: clamp(9rem, 18vw, 20rem);
@@ -3305,10 +3305,11 @@ h2 {
   }
 
   .on-demand-hero-image .on-demand-hero-art {
-    top: -1rem;
+    top: -2rem;
     right: auto;
-    left: 0;
+    left: 50%;
     width: clamp(8rem, 29vw, 12rem);
+    transform: translateX(-50%) rotate(8deg);
   }
 
   .on-demand-hero-image::before {
