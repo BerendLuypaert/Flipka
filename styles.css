@@ -929,6 +929,55 @@ h2 {
   z-index: 1;
 }
 
+.artwork-book-page-art {
+  position: absolute !important;
+  z-index: 0 !important;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0.8rem 0.55rem rgba(9, 9, 9, 0.15));
+}
+
+.artwork-book-cover > div {
+  width: 52%;
+}
+
+.artwork-book-cover .artwork-book-page-art {
+  right: -1%;
+  bottom: -3%;
+  width: 57%;
+  height: 94%;
+  object-fit: contain;
+  transform: rotate(3deg);
+}
+
+.artwork-principle-pink h3,
+.artwork-principle-pink p,
+.artwork-principle-pink small,
+.artwork-principle-green h3,
+.artwork-principle-green p,
+.artwork-principle-green small {
+  max-width: 54%;
+}
+
+.artwork-principle-pink .artwork-book-page-art {
+  right: 1%;
+  bottom: 2%;
+  width: 45%;
+  height: 64%;
+  object-fit: contain;
+  transform: rotate(5deg);
+}
+
+.artwork-principle-green .artwork-book-page-art {
+  right: 0;
+  bottom: 2%;
+  width: 47%;
+  height: 68%;
+  object-fit: contain;
+  transform: rotate(-4deg);
+}
+
 .artwork-principle-pink {
   background:
     radial-gradient(circle at 92% 14%, rgba(237, 33, 104, 0.92) 0 3.5rem, transparent 3.62rem),
