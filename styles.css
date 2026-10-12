@@ -1557,19 +1557,64 @@ h2 {
 }
 
 .on-demand-hero-image {
-  width: min(100%, 44rem);
+  position: relative;
+  width: min(62vw, 64rem);
+  min-height: min(45rem, 64vw);
   margin: 0;
-  justify-self: center;
-  transform: rotate(2deg);
-  filter: drop-shadow(1rem 1.2rem 0 var(--pink)) drop-shadow(0 1.4rem 1.5rem rgba(68, 44, 20, 0.16));
+  justify-self: end;
+  transform: none;
+  filter: none;
 }
 
-.on-demand-hero-image img {
+.on-demand-hero-image > img:first-child {
+  position: absolute;
+  top: 50%;
+  right: -8vw;
+  width: min(62vw, 64rem);
+  height: min(43vw, 42rem);
+  object-fit: cover;
+  object-position: 50% 45%;
+  transform: translateY(-50%) rotate(-2deg);
   display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba(9, 9, 9, 0.12);
+  border: 0;
   border-radius: 0.45rem;
+  box-shadow: var(--shadow);
+  clip-path: polygon(6% 0, 100% 0, 100% 95%, 0 100%, 0 12%);
+}
+
+.on-demand-hero-image .on-demand-hero-art {
+  position: absolute;
+  top: -1rem;
+  right: min(6vw, 5rem);
+  z-index: 2;
+  display: block;
+  width: clamp(9rem, 18vw, 20rem);
+  min-height: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  filter: drop-shadow(0 18px 18px rgba(9, 9, 9, 0.13));
+  transform: rotate(8deg);
+}
+
+.on-demand-hero-image .on-demand-hero-art::before,
+.on-demand-hero-image .on-demand-hero-art::after {
+  display: none;
+}
+
+.on-demand-hero-image::before {
+  position: absolute;
+  top: 12%;
+  left: -4rem;
+  z-index: 0;
+  width: 9rem;
+  height: 6rem;
+  border-radius: 59% 41% 65% 35%;
+  background: radial-gradient(circle at 30% 30%, #ecc1ff, var(--purple) 64%);
+  content: "";
+  transform: rotate(-24deg);
 }
 
 .on-demand-projects {
@@ -3145,6 +3190,12 @@ h2 {
     justify-self: center;
   }
 
+  .on-demand-hero-image {
+    width: min(34rem, 100%);
+    min-height: 30rem;
+    justify-self: center;
+  }
+
   .on-demand-project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3242,8 +3293,29 @@ h2 {
   }
 
   .on-demand-hero-image {
-    width: min(100%, 27rem);
-    transform: rotate(1deg);
+    width: 100%;
+    min-height: 24rem;
+    justify-self: stretch;
+  }
+
+  .on-demand-hero-image > img:first-child {
+    right: -3rem;
+    width: calc(100vw - 2rem);
+    height: 22rem;
+    transform: translateY(-50%) rotate(-2deg);
+  }
+
+  .on-demand-hero-image .on-demand-hero-art {
+    top: -1rem;
+    right: auto;
+    left: 0;
+    width: clamp(8rem, 29vw, 12rem);
+  }
+
+  .on-demand-hero-image::before {
+    left: -1.5rem;
+    width: 6.5rem;
+    height: 4.5rem;
   }
 
   .on-demand-hero-word {
