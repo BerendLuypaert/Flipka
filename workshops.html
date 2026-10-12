@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Workshops | Flipka</title>
     <link rel="icon" type="image/png" href="assets/flipka-favicon.png">
-    <link rel="stylesheet" href="styles.css?v=20261012-workshop-gallery-1">
+    <link rel="stylesheet" href="styles.css?v=20261012-media-1">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Flipka home">
-        <img src="assets/flipka-logo-color.png" alt="Flipka">
+        <img src="assets/optimized/flipka-logo-color.webp" alt="Flipka" decoding="async" fetchpriority="high">
       </a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
         <span></span>
@@ -38,9 +38,8 @@
 
     <main class="workshop-page">
       <div class="workshop-banner">
-        <video autoplay muted loop playsinline preload="auto" aria-label="Animatie voor de workshops">
-          <source src="assets/workshop-banner.mp4" type="video/mp4">
-        </video>
+        <video class="workshop-banner-video" autoplay muted loop playsinline preload="none" aria-label="Animatie voor de workshops" data-desktop-video="assets/workshop-banner.mp4"></video>
+        <img class="workshop-banner-mobile" src="assets/workshop-banner-mobile.webp" alt="Animatie voor de workshops" decoding="async" fetchpriority="high">
       </div>
       <section class="workshop-hero" aria-labelledby="workshop-title">
         <div class="workshop-hero-copy">
@@ -51,7 +50,7 @@
           <a class="button button-dark" href="contact.html">Contact me <svg class="arrow-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 L13 3 M7 3 L13 3 L13 9"></path></svg></a>
         </div>
         <div class="workshop-hero-note" aria-hidden="true">
-          <img src="assets/icon-workshops-trim.png" alt="">
+          <img src="assets/optimized/icon-workshops-trim.webp" alt="" decoding="async" fetchpriority="high">
         </div>
       </section>
 
@@ -89,17 +88,17 @@
         <div class="workshop-gallery-grid">
           <figure class="workshop-gallery-card workshop-gallery-card-wide">
             <span class="workshop-gallery-index">01</span>
-            <img src="assets/workshop-gallery-01.jpg?v=20261012-workshop-gallery" alt="Workshopgroep aan het werk in een creatieve ruimte" loading="lazy">
+            <img src="assets/optimized/workshop-gallery-01.webp?v=20261012-workshop-gallery" alt="Workshopgroep aan het werk in een creatieve ruimte" loading="lazy" decoding="async">
             <figcaption>Get in the mix</figcaption>
           </figure>
           <figure class="workshop-gallery-card workshop-gallery-card-focus">
             <span class="workshop-gallery-index">02</span>
-            <img src="assets/workshop-gallery-02.jpg?v=20261012-workshop-gallery" alt="Workshopdeelnemer die met spray paint werkt" loading="lazy">
+            <img src="assets/optimized/workshop-gallery-02.webp?v=20261012-workshop-gallery" alt="Workshopdeelnemer die met spray paint werkt" loading="lazy" decoding="async">
             <figcaption>Find your colour</figcaption>
           </figure>
           <figure class="workshop-gallery-card workshop-gallery-card-tall">
             <span class="workshop-gallery-index">03</span>
-            <img src="assets/workshop-gallery-03.jpg?v=20261012-workshop-gallery" alt="Jonge deelnemers die samen een muur beschilderen" loading="lazy">
+            <img src="assets/optimized/workshop-gallery-03.webp?v=20261012-workshop-gallery" alt="Jonge deelnemers die samen een muur beschilderen" loading="lazy" decoding="async">
             <figcaption>Make it together</figcaption>
           </figure>
         </div>
@@ -129,6 +128,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20261005-dropdown-hidden"></script>
+    <script src="script.js?v=20261012-media-1"></script>
   </body>
 </html>

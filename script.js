@@ -75,6 +75,18 @@ document.addEventListener("keydown", (event) => {
 updateHeaderState();
 window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
 
+const desktopVideos = document.querySelectorAll("[data-desktop-video]");
+
+if (desktopVideos.length && window.matchMedia("(min-width: 621px)").matches) {
+  desktopVideos.forEach((video) => {
+    const source = document.createElement("source");
+    source.src = video.dataset.desktopVideo;
+    source.type = "video/mp4";
+    video.append(source);
+    video.load();
+  });
+}
+
 const flipbook = document.querySelector("[data-flipbook]");
 const flipbookScroll = document.querySelector("[data-flipbook-scroll]");
 

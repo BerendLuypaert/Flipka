@@ -544,6 +544,10 @@ h2 {
   object-position: center;
 }
 
+.workshop-banner-mobile {
+  display: none;
+}
+
 .workshop-hero {
   position: relative;
   z-index: 1;
@@ -2079,8 +2083,16 @@ h2 {
   position: absolute;
   top: 1.1rem;
   right: 1.3rem;
-  font-size: 2rem;
-  line-height: 1;
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.contact-detail-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .contact-detail-pink { background: #ffd5e7; }
@@ -4204,9 +4216,20 @@ h2 {
   }
 
   .shoes-hero-image {
-    right: -16%;
-    bottom: 2%;
-    width: 124%;
+    right: 50%;
+    bottom: 50%;
+    width: 104%;
+    transform: translate(50%, 50%) rotate(-5deg);
+  }
+
+  .workshop-banner-video {
+    display: none;
+  }
+
+  .workshop-banner-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .shoes-offer {
