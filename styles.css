@@ -675,6 +675,151 @@ h2 {
   line-height: 1.5;
 }
 
+.workshop-gallery {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255, 196, 0, 0.2), transparent 18rem),
+    radial-gradient(circle at 92% 55%, rgba(237, 33, 104, 0.14), transparent 22rem),
+    linear-gradient(135deg, #fbf7ee 0%, var(--paper) 100%);
+}
+
+.workshop-gallery::before,
+.workshop-gallery::after {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.workshop-gallery::before {
+  top: 10rem;
+  right: -2.5rem;
+  width: 7rem;
+  height: 7rem;
+  background: var(--green);
+  opacity: 0.82;
+}
+
+.workshop-gallery::after {
+  bottom: 6rem;
+  left: -2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  background: var(--purple);
+  opacity: 0.8;
+}
+
+.workshop-gallery-intro,
+.workshop-gallery-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.workshop-gallery-intro {
+  max-width: 39rem;
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.workshop-gallery-intro h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.workshop-gallery-intro > p:last-child {
+  max-width: 30rem;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.workshop-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 2rem);
+  align-items: start;
+}
+
+.workshop-gallery-card {
+  position: relative;
+  grid-column: span 7;
+  margin: 0;
+  padding: clamp(0.55rem, 1.2vw, 0.85rem);
+  overflow: hidden;
+  border: 1px solid rgba(9, 9, 9, 0.14);
+  border-radius: 0.55rem;
+  background: var(--paper-strong);
+  box-shadow: 0 22px 45px rgba(68, 44, 20, 0.12);
+  transform: rotate(-1.2deg);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.workshop-gallery-card:nth-child(2) {
+  grid-column: span 5;
+  transform: rotate(1.5deg);
+}
+
+.workshop-gallery-card:nth-child(3) {
+  grid-column: 3 / span 7;
+  transform: rotate(-1.8deg);
+}
+
+.workshop-gallery-card:hover,
+.workshop-gallery-card:focus-within {
+  z-index: 2;
+  box-shadow: var(--shadow);
+  transform: translateY(-0.45rem) rotate(0deg);
+}
+
+.workshop-gallery-index {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink);
+  color: var(--ink);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.workshop-gallery-card:nth-child(2) .workshop-gallery-index {
+  background: var(--yellow);
+}
+
+.workshop-gallery-card:nth-child(3) .workshop-gallery-index {
+  background: var(--blue);
+}
+
+.workshop-gallery-card img {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 31vw, 28rem);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  background: #111827;
+}
+
+.workshop-gallery-card figcaption {
+  padding: 0.75rem 0.2rem 0.1rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .workshop-posca {
   position: relative;
   z-index: 1;
@@ -1982,6 +2127,22 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .workshop-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workshop-gallery-card {
+    grid-column: span 2;
+  }
+
+  .workshop-gallery-card:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .workshop-gallery-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
   .artwork-principle-grid {
     grid-template-columns: 1fr;
   }
@@ -2088,6 +2249,37 @@ h2 {
 
   .workshop-posca h2 {
     font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .workshop-gallery {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .workshop-gallery-intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .workshop-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .workshop-gallery-card,
+  .workshop-gallery-card:nth-child(2),
+  .workshop-gallery-card:nth-child(3) {
+    grid-column: span 1;
+    transform: rotate(-1deg);
+  }
+
+  .workshop-gallery-card:nth-child(2) {
+    transform: rotate(1.2deg);
+  }
+
+  .workshop-gallery-card img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 
   .artwork-availability {
