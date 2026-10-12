@@ -530,7 +530,7 @@ h2 {
   width: 100%;
   height: auto;
   margin: 0;
-  overflow: visible;
+  overflow: hidden;
   background: #ffffff;
 }
 
@@ -539,6 +539,7 @@ h2 {
   width: 100%;
   max-width: none;
   height: auto;
+  margin-top: calc(-1 * clamp(1rem, 3vw, 2rem));
   object-fit: contain;
   object-position: center;
 }
