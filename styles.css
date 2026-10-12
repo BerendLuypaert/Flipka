@@ -1854,8 +1854,32 @@ h2 {
   line-height: 1.55;
 }
 
-.on-demand-cta .button {
+.on-demand-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
   margin-top: 0.7rem;
+}
+
+.on-demand-cta .button {
+  margin-top: 0;
+}
+
+.on-demand-cta .button-instagram {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: linear-gradient(120deg, #ffc400 0%, #ed2168 48%, #a65dd4 100%);
+  box-shadow: 0 0.65rem 0 rgba(255, 255, 255, 0.14);
+}
+
+.on-demand-cta .button-instagram:hover {
+  color: var(--ink);
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+.on-demand-cta .button-instagram .arrow-icon {
+  color: var(--ink);
 }
 
 .artwork-page {
@@ -3354,6 +3378,11 @@ h2 {
     margin-right: 1rem;
     margin-left: 1rem;
     padding: 1.5rem;
+  }
+
+  .on-demand-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .shoes-hero-art {
