@@ -76,68 +76,42 @@ updateHeaderState();
 window.addEventListener("scroll", requestHeaderUpdate, { passive: true });
 
 const flipbook = document.querySelector("[data-flipbook]");
+const flipbookScroll = document.querySelector("[data-flipbook-scroll]");
 
-if (flipbook) {
+if (flipbook && flipbookScroll) {
   const pages = [...flipbook.querySelectorAll("[data-page]")];
-  const previousButton = flipbook.querySelector("[data-flip-prev]");
-  const nextButton = flipbook.querySelector("[data-flip-next]");
-  const counter = flipbook.querySelector("[data-flip-count]");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let currentPage = 0;
-  let direction = 1;
-  let isPaused = false;
+  let currentPage = -1;
+  let tickingFlipbook = false;
 
-  const renderFlipbook = () => {
+  const renderFlipbook = (pageIndex) => {
+    if (pageIndex === currentPage) return;
+    currentPage = pageIndex;
+
     pages.forEach((page, index) => {
-      const isCurrent = index === currentPage;
-      const isFlipped = index < currentPage;
-      const zIndex = isFlipped ? index + 1 : pages.length - index;
-
-      page.classList.toggle("is-current", isCurrent);
-      page.classList.toggle("is-flipped", isFlipped);
-      page.style.zIndex = String(zIndex);
+      page.classList.toggle("is-current", index === currentPage);
+      page.classList.toggle("is-flipped", index < currentPage);
+      page.style.zIndex = String(index < currentPage ? index + 1 : pages.length - index);
     });
-
-    if (previousButton) previousButton.disabled = currentPage === 0;
-    if (nextButton) nextButton.disabled = currentPage === pages.length - 1;
-    if (counter) counter.textContent = `${String(currentPage + 1).padStart(2, "0")} / ${String(pages.length).padStart(2, "0")}`;
   };
 
-  const showPage = (pageIndex) => {
-    currentPage = Math.max(0, Math.min(pageIndex, pages.length - 1));
-    renderFlipbook();
+  const updateFlipbookFromScroll = () => {
+    const scrollDistance = Math.max(1, flipbookScroll.offsetHeight - window.innerHeight);
+    const progress = Math.min(1, Math.max(0, -flipbookScroll.getBoundingClientRect().top / scrollDistance));
+    const pageIndex = Math.min(pages.length - 1, Math.floor(progress * pages.length));
+    renderFlipbook(pageIndex);
   };
 
-  const nextPage = () => showPage(currentPage + 1);
-  const previousPage = () => showPage(currentPage - 1);
-
-  previousButton?.addEventListener("click", previousPage);
-  nextButton?.addEventListener("click", nextPage);
-
-  pages.forEach((page) => {
-    page.addEventListener("click", () => {
-      if (currentPage < pages.length - 1) nextPage();
+  const requestFlipbookUpdate = () => {
+    if (tickingFlipbook) return;
+    tickingFlipbook = true;
+    window.requestAnimationFrame(() => {
+      updateFlipbookFromScroll();
+      tickingFlipbook = false;
     });
-  });
+  };
 
-  flipbook.addEventListener("mouseenter", () => { isPaused = true; });
-  flipbook.addEventListener("mouseleave", () => { isPaused = false; });
-  flipbook.addEventListener("focusin", () => { isPaused = true; });
-  flipbook.addEventListener("focusout", () => { isPaused = false; });
-
-  flipbook.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") previousPage();
-    if (event.key === "ArrowRight") nextPage();
-  });
-
-  renderFlipbook();
-
-  if (!reducedMotion) {
-    window.setInterval(() => {
-      if (isPaused) return;
-      if (currentPage === pages.length - 1) direction = -1;
-      if (currentPage === 0) direction = 1;
-      showPage(currentPage + direction);
-    }, 5200);
-  }
+  renderFlipbook(0);
+  updateFlipbookFromScroll();
+  window.addEventListener("scroll", requestFlipbookUpdate, { passive: true });
+  window.addEventListener("resize", requestFlipbookUpdate);
 }
