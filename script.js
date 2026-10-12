@@ -95,11 +95,15 @@ if (flipbook && flipbookScroll) {
   };
 
   const updateFlipbookFromScroll = () => {
-    const stickTop = Math.max(76, Math.min(window.innerHeight * 0.09, 112));
+    const headerHeight = header?.getBoundingClientRect().height ?? 0;
+    const availableHeight = window.innerHeight - headerHeight;
+    const centeredTop = headerHeight + Math.max(16, (availableHeight - flipbook.offsetHeight) / 2);
+    const stickTop = Math.max(headerHeight + 16, centeredTop);
     const sectionRect = flipbookScroll.getBoundingClientRect();
     const hasStarted = sectionRect.top <= stickTop;
     const hasFinished = sectionRect.bottom <= stickTop + flipbook.offsetHeight;
 
+    flipbook.style.setProperty("--flipbook-top", `${centeredTop}px`);
     flipbook.classList.toggle("is-pinned", hasStarted && !hasFinished);
     flipbook.classList.toggle("is-finished", hasFinished);
 

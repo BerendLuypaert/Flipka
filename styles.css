@@ -869,7 +869,7 @@ h2 {
 
 .artwork-flipbook.is-pinned {
   position: fixed;
-  top: clamp(4.8rem, 9vh, 7rem);
+  top: var(--flipbook-top, clamp(4.8rem, 9vh, 7rem));
 }
 
 .artwork-flipbook.is-finished {
