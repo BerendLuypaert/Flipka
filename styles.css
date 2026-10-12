@@ -1559,7 +1559,7 @@ h2 {
 .on-demand-hero-image {
   position: relative;
   width: min(54vw, 64rem);
-  min-height: min(45rem, 64vw);
+  min-height: 0;
   margin: 0;
   justify-self: end;
   transform: none;
@@ -1567,19 +1567,15 @@ h2 {
 }
 
 .on-demand-hero-image > img:first-child {
-  position: absolute;
-  top: 50%;
-  right: -5vw;
-  width: min(54vw, 64rem);
-  height: min(40vw, 40rem);
-  object-fit: cover;
-  object-position: 50% 45%;
-  transform: translateY(-50%) rotate(-2deg);
+  position: relative;
+  width: 100%;
+  height: auto;
   display: block;
   border: 0;
   border-radius: 0.45rem;
   box-shadow: var(--shadow);
   clip-path: polygon(6% 0, 100% 0, 100% 95%, 0 100%, 0 12%);
+  transform: rotate(-2deg);
 }
 
 .on-demand-hero-image .on-demand-hero-art {
@@ -3192,7 +3188,7 @@ h2 {
 
   .on-demand-hero-image {
     width: min(34rem, 100%);
-    min-height: 30rem;
+    min-height: 0;
     justify-self: center;
   }
 
@@ -3294,15 +3290,15 @@ h2 {
 
   .on-demand-hero-image {
     width: 100%;
-    min-height: 24rem;
+    min-height: 0;
     justify-self: stretch;
   }
 
   .on-demand-hero-image > img:first-child {
-    right: -3rem;
-    width: calc(100vw - 2rem);
-    height: 22rem;
-    transform: translateY(-50%) rotate(-2deg);
+    right: auto;
+    width: 100%;
+    height: auto;
+    transform: rotate(-2deg);
   }
 
   .on-demand-hero-image .on-demand-hero-art {
