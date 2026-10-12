@@ -866,6 +866,332 @@ h2 {
   text-underline-offset: 0.2em;
 }
 
+.shoes-page {
+  overflow: hidden;
+}
+
+.shoes-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 8rem);
+  min-height: clamp(39rem, 78vh, 54rem);
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255, 196, 0, 0.2), transparent 19rem),
+    linear-gradient(135deg, #fffaf1 0%, #f5e9ff 54%, #dcfbf2 100%);
+}
+
+.shoes-hero::before {
+  position: absolute;
+  top: -5rem;
+  right: 14%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: var(--pink);
+  content: "";
+  opacity: 0.9;
+}
+
+.shoes-hero-copy,
+.shoes-hero-art {
+  position: relative;
+  z-index: 1;
+}
+
+.shoes-hero-copy {
+  max-width: 44rem;
+}
+
+.shoes-hero h1 {
+  max-width: 9ch;
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+.shoes-hero-copy p:not(.eyebrow) {
+  max-width: 38rem;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.shoes-hero-copy .shoes-lead {
+  margin-top: 1.5rem;
+  font-weight: 800;
+}
+
+.shoes-hero-copy .button {
+  margin-top: 1rem;
+}
+
+.shoes-hero-art {
+  min-height: clamp(22rem, 42vw, 35rem);
+  border: 1px solid rgba(9, 9, 9, 0.14);
+  border-radius: 47% 53% 58% 42% / 42% 44% 56% 58%;
+  background:
+    radial-gradient(circle at 26% 25%, rgba(255, 255, 255, 0.75) 0 0.45rem, transparent 0.5rem),
+    radial-gradient(circle at 75% 70%, rgba(255, 255, 255, 0.68) 0 0.8rem, transparent 0.86rem),
+    #ffc7e1;
+  box-shadow: 1.3rem 1.3rem 0 -0.3rem var(--green), 0 24px 55px rgba(68, 44, 20, 0.14);
+  transform: rotate(5deg);
+}
+
+.shoes-hero-sticker {
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  z-index: 3;
+  display: grid;
+  width: 5.4rem;
+  height: 5.4rem;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.1em;
+  text-align: center;
+  transform: rotate(14deg);
+}
+
+.shoe-illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(94%, 34rem);
+  aspect-ratio: 1.55;
+  transform: translate(-50%, -50%) rotate(-8deg);
+}
+
+.shoe-upper,
+.shoe-heel,
+.shoe-sole,
+.shoe-swoosh {
+  position: absolute;
+}
+
+.shoe-upper {
+  left: 12%;
+  top: 17%;
+  width: 75%;
+  height: 56%;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  border-radius: 60% 24% 22% 46% / 43% 34% 42% 58%;
+  background:
+    repeating-linear-gradient(135deg, rgba(7, 86, 217, 0.88) 0 1.8rem, rgba(19, 183, 146, 0.9) 1.8rem 3.7rem, rgba(255, 196, 0, 0.94) 3.7rem 5.2rem),
+    #f6efe4;
+  box-shadow: 0 0.8rem 0 rgba(9, 9, 9, 0.18);
+}
+
+.shoe-upper::before {
+  position: absolute;
+  right: -2%;
+  bottom: 9%;
+  width: 56%;
+  height: 58%;
+  border: 3px solid var(--ink);
+  border-radius: 65% 20% 30% 45%;
+  background: rgba(237, 33, 104, 0.88);
+  content: "";
+  transform: rotate(10deg);
+}
+
+.shoe-heel {
+  left: 7%;
+  top: 33%;
+  width: 25%;
+  height: 39%;
+  border: 3px solid var(--ink);
+  border-radius: 48% 10% 16% 38%;
+  background: #a65dd4;
+  transform: rotate(15deg);
+}
+
+.shoe-sole {
+  left: 8%;
+  bottom: 18%;
+  width: 82%;
+  height: 16%;
+  border: 3px solid var(--ink);
+  border-radius: 50% 30% 35% 45%;
+  background: #fffaf1;
+  transform: rotate(-2deg);
+}
+
+.shoe-swoosh {
+  right: 19%;
+  top: 26%;
+  width: 27%;
+  height: 27%;
+  border-bottom: 1.2rem solid var(--ink);
+  border-radius: 0 0 80% 70%;
+  transform: rotate(-18deg);
+}
+
+.shoe-lace {
+  position: absolute;
+  left: 32%;
+  z-index: 2;
+  width: 27%;
+  height: 0.32rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0 0 2px var(--ink);
+  transform: rotate(-18deg);
+}
+
+.shoe-lace-one { top: 24%; }
+.shoe-lace-two { top: 37%; transform: rotate(-8deg); }
+.shoe-lace-three { top: 50%; transform: rotate(2deg); }
+
+.shoe-dot {
+  position: absolute;
+  z-index: 2;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.shoe-dot-one { top: 11%; left: 19%; }
+.shoe-dot-two { top: 68%; left: 42%; background: var(--green); }
+.shoe-dot-three { top: 22%; right: 18%; background: var(--pink); }
+
+.shoes-hero-note {
+  position: absolute;
+  bottom: 10%;
+  left: 9%;
+  z-index: 3;
+  color: var(--ink);
+  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 900;
+  transform: rotate(-12deg);
+}
+
+.shoes-offer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  background: var(--paper);
+}
+
+.shoes-offer-intro {
+  max-width: 38rem;
+}
+
+.shoes-offer-intro h2 {
+  max-width: 10ch;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.shoes-offer-intro > p:last-child {
+  max-width: 28rem;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.shoes-price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-self: center;
+}
+
+.shoes-price-card {
+  min-height: 18rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 42px rgba(68, 44, 20, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.shoes-price-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+.shoes-price-card-pink { background: #ffd5e7; }
+.shoes-price-card-green { background: #c9f7e8; }
+
+.shoes-price-card > span {
+  display: block;
+  margin-bottom: 3rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.shoes-price-card h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  line-height: 0.95;
+}
+
+.shoes-price-card p {
+  margin: 0.7rem 0 0;
+}
+
+.shoes-price-card strong {
+  display: block;
+  margin-top: 2rem;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  letter-spacing: -0.06em;
+}
+
+.shoes-process {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  margin: 0 clamp(1rem, 7vw, 8rem) clamp(4rem, 8vw, 8rem);
+  padding: clamp(2rem, 5vw, 5rem);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  background:
+    radial-gradient(circle at 92% 15%, rgba(255, 196, 0, 0.95) 0 3.8rem, transparent 3.92rem),
+    radial-gradient(circle at 78% 80%, rgba(19, 183, 146, 0.9) 0 1.5rem, transparent 1.58rem),
+    var(--ink);
+}
+
+.shoes-process h2 {
+  max-width: 8ch;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.shoes-process .eyebrow {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.shoes-process-copy {
+  max-width: 39rem;
+  align-self: end;
+}
+
+.shoes-process-copy p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.shoes-process .button {
+  margin-top: 0.7rem;
+}
+
 .artwork-page {
   overflow: visible;
 }
@@ -2111,12 +2437,24 @@ h2 {
   .workshop-hero,
   .workshop-posca,
   .artwork-hero,
-  .artwork-availability {
+  .artwork-availability,
+  .shoes-hero,
+  .shoes-offer,
+  .shoes-process {
     grid-template-columns: 1fr;
   }
 
   .workshop-hero {
     gap: 3rem;
+  }
+
+  .shoes-hero {
+    gap: 3rem;
+  }
+
+  .shoes-hero-art {
+    width: min(34rem, 100%);
+    justify-self: center;
   }
 
   .workshop-hero-note {
@@ -2220,6 +2558,55 @@ h2 {
 
   .workshop-hero h1 {
     font-size: clamp(3rem, 15vw, 4.8rem);
+  }
+
+  .shoes-hero {
+    min-height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .shoes-hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5.2rem);
+  }
+
+  .shoes-hero-art {
+    min-height: 20rem;
+    width: min(22rem, 92vw);
+  }
+
+  .shoes-hero-sticker {
+    width: 4.3rem;
+    height: 4.3rem;
+    font-size: 0.6rem;
+  }
+
+  .shoes-offer {
+    gap: 2.5rem;
+  }
+
+  .shoes-offer-intro h2,
+  .shoes-process h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .shoes-price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shoes-price-card {
+    min-height: 14rem;
+  }
+
+  .shoes-price-card > span {
+    margin-bottom: 2rem;
+  }
+
+  .shoes-process {
+    gap: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 1.5rem;
   }
 
   .artwork-hero {
