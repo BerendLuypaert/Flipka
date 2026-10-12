@@ -1191,6 +1191,160 @@ h2 {
   letter-spacing: -0.06em;
 }
 
+.shoes-gallery {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  background:
+    radial-gradient(circle at 7% 18%, rgba(255, 196, 0, 0.22), transparent 18rem),
+    radial-gradient(circle at 93% 58%, rgba(19, 183, 146, 0.16), transparent 22rem),
+    linear-gradient(135deg, #fbf7ee 0%, #f5e9ff 100%);
+}
+
+.shoes-gallery::before,
+.shoes-gallery::after {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.shoes-gallery::before {
+  top: 10rem;
+  right: -2.5rem;
+  width: 7rem;
+  height: 7rem;
+  background: var(--pink);
+  opacity: 0.84;
+}
+
+.shoes-gallery::after {
+  bottom: 7rem;
+  left: -2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  background: var(--blue);
+  opacity: 0.78;
+}
+
+.shoes-gallery-intro,
+.shoes-gallery-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.shoes-gallery-intro {
+  max-width: 39rem;
+  margin-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.shoes-gallery-intro h2 {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.shoes-gallery-intro > p:last-child {
+  max-width: 30rem;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.shoes-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 2rem);
+  align-items: start;
+}
+
+.shoes-gallery-card {
+  position: relative;
+  grid-column: span 5;
+  margin: 0;
+  padding: clamp(0.55rem, 1.2vw, 0.85rem);
+  overflow: hidden;
+  border: 1px solid rgba(9, 9, 9, 0.14);
+  border-radius: 0.55rem;
+  background: var(--paper-strong);
+  box-shadow: 0 22px 45px rgba(68, 44, 20, 0.12);
+  transform: rotate(-1.2deg);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.shoes-gallery-card-wide {
+  grid-column: span 7;
+}
+
+.shoes-gallery-card-tall {
+  transform: rotate(1.6deg);
+}
+
+.shoes-gallery-card-last {
+  grid-column: 3 / span 7;
+  transform: rotate(-1.8deg);
+}
+
+.shoes-gallery-card:hover,
+.shoes-gallery-card:focus-within {
+  z-index: 2;
+  box-shadow: var(--shadow);
+  transform: translateY(-0.45rem) rotate(0deg);
+}
+
+.shoes-gallery-index {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink);
+  color: var(--ink);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.shoes-gallery-card:nth-child(2) .shoes-gallery-index {
+  background: var(--yellow);
+}
+
+.shoes-gallery-card:nth-child(3) .shoes-gallery-index {
+  background: var(--blue);
+}
+
+.shoes-gallery-card img {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 31vw, 28rem);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  background: #111827;
+}
+
+.shoes-gallery-card-tall img {
+  height: clamp(19rem, 38vw, 34rem);
+  object-fit: contain;
+  background: #f3edf8;
+}
+
+.shoes-gallery-card figcaption {
+  padding: 0.75rem 0.2rem 0.1rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .shoes-process {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -2537,6 +2691,20 @@ h2 {
     grid-column: span 1;
   }
 
+  .shoes-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shoes-gallery-card,
+  .shoes-gallery-card-wide,
+  .shoes-gallery-card-last {
+    grid-column: span 2;
+  }
+
+  .shoes-gallery-card-tall {
+    grid-column: span 1;
+  }
+
   .service-grid,
   .link-grid,
   .mural-showcase,
@@ -2645,6 +2813,38 @@ h2 {
 
   .shoes-price-card > span {
     margin-bottom: 2rem;
+  }
+
+  .shoes-gallery {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .shoes-gallery-intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .shoes-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .shoes-gallery-card,
+  .shoes-gallery-card-wide,
+  .shoes-gallery-card-tall,
+  .shoes-gallery-card-last {
+    grid-column: span 1;
+    transform: rotate(-1deg);
+  }
+
+  .shoes-gallery-card:nth-child(2) {
+    transform: rotate(1.2deg);
+  }
+
+  .shoes-gallery-card img,
+  .shoes-gallery-card-tall img {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .shoes-process {
