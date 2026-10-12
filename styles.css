@@ -1884,3 +1884,47 @@ h2 {
     transition: none;
   }
 }
+
+@media (max-width: 620px) {
+  .artwork-flipbook-scroll {
+    height: 260vh;
+  }
+
+  .artwork-book {
+    height: clamp(20rem, 76vw, 22rem);
+  }
+
+  .artwork-book-page {
+    padding: 1.15rem;
+  }
+
+  .artwork-book-page h3 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .artwork-book-cover > div {
+    width: 43%;
+  }
+
+  .artwork-book-cover .artwork-book-page-art {
+    right: -2%;
+    width: 53%;
+    height: 90%;
+  }
+
+  .artwork-principle-pink h3,
+  .artwork-principle-pink p,
+  .artwork-principle-pink small,
+  .artwork-principle-green h3,
+  .artwork-principle-green p,
+  .artwork-principle-green small {
+    max-width: 56%;
+  }
+
+  .artwork-principle-pink .artwork-book-page-art,
+  .artwork-principle-green .artwork-book-page-art {
+    right: -2%;
+    width: 34%;
+    height: 54%;
+  }
+}
