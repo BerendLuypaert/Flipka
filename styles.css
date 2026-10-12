@@ -853,10 +853,28 @@ h2 {
 }
 
 .artwork-flipbook {
-  position: sticky;
-  top: clamp(4.8rem, 9vh, 7rem);
+  position: relative;
   width: min(100%, 48rem);
   margin: 0 auto;
+}
+
+.artwork-flipbook.is-pinned,
+.artwork-flipbook.is-finished {
+  z-index: 5;
+  width: min(48rem, calc(100vw - 2rem));
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.artwork-flipbook.is-pinned {
+  position: fixed;
+  top: clamp(4.8rem, 9vh, 7rem);
+}
+
+.artwork-flipbook.is-finished {
+  position: absolute;
+  bottom: 0;
 }
 
 .artwork-book {

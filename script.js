@@ -95,8 +95,16 @@ if (flipbook && flipbookScroll) {
   };
 
   const updateFlipbookFromScroll = () => {
+    const stickTop = Math.max(76, Math.min(window.innerHeight * 0.09, 112));
+    const sectionRect = flipbookScroll.getBoundingClientRect();
+    const hasStarted = sectionRect.top <= stickTop;
+    const hasFinished = sectionRect.bottom <= stickTop + flipbook.offsetHeight;
+
+    flipbook.classList.toggle("is-pinned", hasStarted && !hasFinished);
+    flipbook.classList.toggle("is-finished", hasFinished);
+
     const scrollDistance = Math.max(1, flipbookScroll.offsetHeight - window.innerHeight);
-    const progress = Math.min(1, Math.max(0, -flipbookScroll.getBoundingClientRect().top / scrollDistance));
+    const progress = Math.min(1, Math.max(0, -sectionRect.top / scrollDistance));
     const pageIndex = Math.min(pages.length - 1, Math.floor(progress * pages.length));
     renderFlipbook(pageIndex);
   };
