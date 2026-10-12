@@ -1558,11 +1558,11 @@ h2 {
 
 .on-demand-hero-image {
   position: relative;
-  width: min(54vw, 64rem);
+  width: min(45vw, 60rem);
   min-height: 0;
   margin: 0;
   justify-self: end;
-  transform: none;
+  transform: translateX(5vw);
   filter: none;
 }
 
@@ -3292,6 +3292,7 @@ h2 {
     width: 100%;
     min-height: 0;
     justify-self: stretch;
+    transform: none;
   }
 
   .on-demand-hero-image > img:first-child {
