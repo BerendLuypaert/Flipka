@@ -721,6 +721,164 @@ h2 {
   text-underline-offset: 0.2em;
 }
 
+.artwork-page {
+  overflow: hidden;
+}
+
+.artwork-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.9fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 8rem);
+  min-height: clamp(34rem, 70vh, 48rem);
+  padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+  background: linear-gradient(120deg, #fffaf1 0%, #fffaf1 49%, #f0e4ff 100%);
+}
+
+.artwork-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 45rem;
+}
+
+.artwork-hero h1 {
+  max-width: 11ch;
+}
+
+.artwork-hero-copy p:not(.eyebrow) {
+  max-width: 38rem;
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.artwork-hero-copy .artwork-lead {
+  margin-top: 1.5rem;
+  font-weight: 800;
+}
+
+.artwork-hero-copy .button {
+  margin-top: 1rem;
+}
+
+.artwork-hero-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(29rem, 100%);
+  aspect-ratio: 1;
+  justify-self: center;
+}
+
+.artwork-hero-shape {
+  position: absolute;
+  inset: 5%;
+  background: #d9f6e9;
+  border-radius: 58% 42% 35% 65% / 45% 55% 45% 55%;
+  box-shadow: -1.5rem 1.5rem 0 -0.6rem #ed2168, 1.5rem -1.2rem 0 -0.6rem #ffc400;
+  transform: rotate(-8deg);
+}
+
+.artwork-hero-art img {
+  position: relative;
+  z-index: 1;
+  width: 82%;
+  transform: rotate(7deg);
+  filter: drop-shadow(0 1rem 0.8rem rgba(9, 9, 9, 0.16));
+}
+
+.artwork-principles {
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 7vw, 8rem);
+}
+
+.artwork-principles > .section-intro {
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.artwork-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.artwork-principle {
+  min-height: 16rem;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 42px rgba(68, 44, 20, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.artwork-principle:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: var(--shadow);
+}
+
+.artwork-principle-pink {
+  background: #ffd5e7;
+}
+
+.artwork-principle-green {
+  background: #c9f7e8;
+}
+
+.artwork-principle-purple {
+  background: #ead8ff;
+}
+
+.artwork-principle > span {
+  display: block;
+  margin-bottom: 2.7rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.artwork-principle h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+  line-height: 1;
+}
+
+.artwork-principle p {
+  max-width: 22rem;
+  margin: 0.8rem 0 0;
+  line-height: 1.5;
+}
+
+.artwork-availability {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 8rem);
+  margin: 0 clamp(1rem, 7vw, 8rem) clamp(4rem, 8vw, 8rem);
+  padding: clamp(2rem, 5vw, 5rem);
+  color: white;
+  background: var(--ink);
+  border-radius: 0.5rem;
+}
+
+.artwork-availability h2 {
+  max-width: 9ch;
+}
+
+.artwork-availability .eyebrow {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.artwork-availability-copy {
+  max-width: 39rem;
+}
+
+.artwork-availability-copy p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.artwork-availability .button {
+  margin-top: 0.7rem;
+}
+
 .link-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1282,7 +1440,9 @@ h2 {
   }
 
   .workshop-hero,
-  .workshop-posca {
+  .workshop-posca,
+  .artwork-hero,
+  .artwork-availability {
     grid-template-columns: 1fr;
   }
 
@@ -1295,6 +1455,10 @@ h2 {
   }
 
   .workshop-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artwork-principle-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1360,6 +1524,20 @@ h2 {
     font-size: clamp(3rem, 15vw, 4.8rem);
   }
 
+  .artwork-hero {
+    min-height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .artwork-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.8rem);
+  }
+
+  .artwork-hero-art {
+    width: min(19rem, 78vw);
+  }
+
   .workshop-hero-note {
     width: min(19rem, 76vw);
   }
@@ -1372,6 +1550,17 @@ h2 {
   }
 
   .workshop-posca h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .artwork-availability {
+    gap: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 1.5rem;
+  }
+
+  .artwork-availability h2 {
     font-size: clamp(2.4rem, 12vw, 4rem);
   }
 
