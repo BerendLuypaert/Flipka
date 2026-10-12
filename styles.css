@@ -1992,7 +1992,6 @@ h2 {
   object-fit: cover;
   object-position: 57% center;
   box-shadow: var(--shadow);
-  clip-path: polygon(8% 0, 100% 0, 100% 94%, 0 100%, 0 10%);
 }
 
 .about-hero-sticker {
