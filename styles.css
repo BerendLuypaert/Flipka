@@ -1604,14 +1604,15 @@ h2 {
 
 .on-demand-hero-image::before {
   position: absolute;
-  top: 12%;
-  left: -4rem;
-  z-index: 0;
+  top: -2.5rem;
+  left: 12%;
+  z-index: 2;
   width: 9rem;
   height: 6rem;
   border-radius: 59% 41% 65% 35%;
   background: radial-gradient(circle at 30% 30%, #a6f6df, var(--green) 64%);
   content: "";
+  pointer-events: none;
   transform: rotate(-24deg);
 }
 
@@ -3313,7 +3314,8 @@ h2 {
   }
 
   .on-demand-hero-image::before {
-    left: -1.5rem;
+    top: -1.5rem;
+    left: 18%;
     width: 6.5rem;
     height: 4.5rem;
   }
