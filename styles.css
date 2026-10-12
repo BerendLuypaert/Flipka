@@ -722,7 +722,7 @@ h2 {
 }
 
 .artwork-page {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .artwork-hero {
