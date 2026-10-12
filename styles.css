@@ -1404,7 +1404,8 @@ h2 {
 }
 
 .on-demand-hero-copy,
-.on-demand-hero-art {
+.on-demand-hero-art,
+.on-demand-hero-image {
   position: relative;
   z-index: 1;
 }
@@ -1553,6 +1554,22 @@ h2 {
   font-size: 4rem;
   font-weight: 900;
   transform: rotate(14deg);
+}
+
+.on-demand-hero-image {
+  width: min(100%, 44rem);
+  margin: 0;
+  justify-self: center;
+  transform: rotate(2deg);
+  filter: drop-shadow(1rem 1.2rem 0 var(--pink)) drop-shadow(0 1.4rem 1.5rem rgba(68, 44, 20, 0.16));
+}
+
+.on-demand-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(9, 9, 9, 0.12);
+  border-radius: 0.45rem;
 }
 
 .on-demand-projects {
@@ -3222,6 +3239,11 @@ h2 {
   .on-demand-hero-art {
     min-height: 20rem;
     width: min(22rem, 92vw);
+  }
+
+  .on-demand-hero-image {
+    width: min(100%, 27rem);
+    transform: rotate(1deg);
   }
 
   .on-demand-hero-word {
