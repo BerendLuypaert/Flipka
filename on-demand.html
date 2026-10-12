@@ -5,15 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>On demand | Flipka</title>
     <link rel="icon" type="image/png" href="assets/flipka-favicon.png">
-    <link rel="stylesheet" href="styles.css?v=20261005-header-scroll">
+    <link rel="stylesheet" href="styles.css?v=20261012-on-demand-page-1">
   </head>
-  <body class="maintenance-page">
-    <main class="maintenance-card">
-      <img src="assets/flipka-artwork.png" alt="">
-      <p class="eyebrow">Prototype page</p>
-      <h1>On demand</h1>
-      <p>Deze pagina staat in onderhoud. De aparte pagina is alvast toegevoegd voor het prototype.</p>
-      <a class="button button-dark" href="index.html">Terug naar home</a>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Flipka home">
+        <img src="assets/flipka-logo-color.png" alt="Flipka">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
+            What I do <svg class="chevron-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"></path></svg>
+          </button>
+          <div class="nav-dropdown-menu" hidden>
+            <a href="murals.html">Murals</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="artwork.html">Artwork</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="on-demand.html">On demand</a>
+          </div>
+        </div>
+        <a href="about-me.html?v=about-clean">About me</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="contact.html">Contact <svg class="arrow-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 L13 3 M7 3 L13 3 L13 9"></path></svg></a>
+    </header>
+
+    <main class="on-demand-page">
+      <section class="on-demand-hero" aria-labelledby="on-demand-title">
+        <div class="on-demand-hero-copy">
+          <p class="eyebrow">On demand</p>
+          <h1 id="on-demand-title">Let’s work together.</h1>
+          <p class="on-demand-lead">Do you want something really unique?</p>
+          <p>As a professional artist and muralist, I create original artwork on demand — for your company, school, building, product, clothing or accessories.</p>
+          <a class="button button-dark" href="contact.html">Tell me your idea <svg class="arrow-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 L13 3 M7 3 L13 3 L13 9"></path></svg></a>
+        </div>
+        <div class="on-demand-hero-art" aria-hidden="true">
+          <span class="on-demand-hero-word on-demand-hero-word-one">MAKE</span>
+          <span class="on-demand-hero-word on-demand-hero-word-two">IT</span>
+          <span class="on-demand-hero-word on-demand-hero-word-three">YOUR</span>
+          <span class="on-demand-hero-word on-demand-hero-word-four">OWN</span>
+          <div class="on-demand-hero-shape on-demand-hero-shape-one"></div>
+          <div class="on-demand-hero-shape on-demand-hero-shape-two"></div>
+          <div class="on-demand-hero-shape on-demand-hero-shape-three"></div>
+          <div class="on-demand-hero-cross">+</div>
+        </div>
+      </section>
+
+      <section class="on-demand-projects" aria-labelledby="on-demand-projects-title">
+        <div class="on-demand-projects-intro">
+          <p class="eyebrow">Recent projects</p>
+          <h2 id="on-demand-projects-title">One idea can go anywhere.</h2>
+          <p>From a 17-metre wall to a limited-edition hoodie, every commission starts with a blank space and ends with a story.</p>
+        </div>
+        <div class="on-demand-project-grid">
+          <article class="on-demand-project on-demand-project-pink on-demand-project-large">
+            <span>01</span>
+            <div class="on-demand-project-art on-demand-project-art-path"></div>
+            <h3>Hinkelpad</h3>
+            <p>A playful path made to turn a place into an invitation.</p>
+          </article>
+          <article class="on-demand-project on-demand-project-green">
+            <span>02</span>
+            <div class="on-demand-project-art on-demand-project-art-lockers"></div>
+            <h3>Lockers</h3>
+            <p>Old cabinets, given a colourful second life.</p>
+          </article>
+          <article class="on-demand-project on-demand-project-purple">
+            <span>03</span>
+            <div class="on-demand-project-art on-demand-project-art-boxes"></div>
+            <h3>Food boxes</h3>
+            <p>Food design and packaging with a little more energy.</p>
+          </article>
+          <article class="on-demand-project on-demand-project-yellow">
+            <span>04</span>
+            <div class="on-demand-project-art on-demand-project-art-hoodie"></div>
+            <h3>VANGART × Flipka</h3>
+            <p>A limited-edition hoodie made together with a French label.</p>
+          </article>
+          <article class="on-demand-project on-demand-project-blue">
+            <span>05</span>
+            <div class="on-demand-project-art on-demand-project-art-bike"></div>
+            <h3>Felix Bicycles × Flipka</h3>
+            <p>A custom bike concept with room to grow.</p>
+          </article>
+          <article class="on-demand-project on-demand-project-orange on-demand-project-large">
+            <span>06</span>
+            <div class="on-demand-project-art on-demand-project-art-wall"></div>
+            <h3>Hall P, Tongeren</h3>
+            <p>A kids-proof 17-metre wall, drawn digitally and printed as stickers.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="on-demand-cta" aria-labelledby="on-demand-cta-title">
+        <div>
+          <p class="eyebrow">Got a blank space?</p>
+          <h2 id="on-demand-cta-title">Let’s make it impossible to ignore.</h2>
+        </div>
+        <div class="on-demand-cta-copy">
+          <p>Bring me the place, product or idea. I’ll bring the colour, characters and unexpected turn.</p>
+          <a class="button button-light" href="contact.html">Start a conversation <svg class="arrow-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 L13 3 M7 3 L13 3 L13 9"></path></svg></a>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Let's work together</strong>
+        <p>Walls, shoes, products, workshops or crazy creative stuff.</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p><a href="mailto:flip@flipka.be">flip@flipka.be</a> · +32 476 740 944</p>
+      </div>
+    </footer>
+
+    <script src="script.js?v=20261005-dropdown-hidden"></script>
   </body>
 </html>
