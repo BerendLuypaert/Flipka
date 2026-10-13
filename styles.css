@@ -544,6 +544,10 @@ h2 {
   object-position: center;
 }
 
+.workshop-banner-video[hidden] {
+  display: none !important;
+}
+
 .workshop-banner-mobile {
   display: none;
 }

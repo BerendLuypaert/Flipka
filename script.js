@@ -83,6 +83,7 @@ if (desktopVideos.length && window.matchMedia("(min-width: 621px)").matches) {
     source.src = video.dataset.desktopVideo;
     source.type = "video/mp4";
     video.append(source);
+    video.hidden = false;
     video.load();
   });
 }
